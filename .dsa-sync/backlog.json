@@ -1,0 +1,2496 @@
+[
+  {
+    "platform": "Codeforces",
+    "id": "4A",
+    "title": "Watermelon",
+    "url": "https://codeforces.com/contest/4/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int w;\n    scanf(\"%d\" , &w);\n    if(w>2 && w%2==0){\n        printf(\"Yes\");\n    }\n    else{\n        printf(\"No\");\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-01-14",
+    "summary": "Determine if a watermelon of weight w can be divided into two parts, each weighing an even positive integer amount.",
+    "approach": "Check if the weight is strictly greater than 2 and divisible by 2. Any even number greater than 2 can be split into two even positive integers (e.g., 2 and w - 2).",
+    "time": "O(1) constant time parity check.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "w = 2 is even but cannot be split into two positive even integers."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "2167A",
+    "title": "Square?",
+    "url": "https://codeforces.com/contest/2167/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "sortings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n   int t;\n   scanf(\"%d\" , &t);\n   int a,b,c,d;\n   for(int i=1;i<=t;++i){\n       scanf(\"%d %d %d %d\" , &a , &b , &c , &d);\n       if(a==b && b==c && c==d){\n       printf(\"Yes\\n\");\n   }\n   else{\n       printf(\"No\\n\");\n   }\n   }\n\n    return 0;\n}\n",
+    "solved_date": "2026-01-17",
+    "summary": "Algorithmic solution for 'Square?'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "9",
+    "title": "Palindrome Number",
+    "url": "https://leetcode.com/problems/palindrome-number/",
+    "difficulty": "easy",
+    "tags": [
+      "math"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "bool isPalindrome(int x) {\n    int num=x;\n    int rem;\n    long rev=0;\n    if(x<0){\n        return false;\n    }\n     while(num!=0){\n        rem = num%10;\n        rev = rev*10 +rem;\n        num=num/10;\n    }\n    if(rev==x){\n        return true;\n    }\n    return false;\n}",
+    "solved_date": "2026-02-27",
+    "summary": "Determine whether an integer reads the same forwards and backwards.",
+    "approach": "Negative numbers cannot be palindromes. For non-negative integers, reverse the digits iteratively and compare the reversed value with the original number.",
+    "time": "O(log10(n)) proportional to the number of decimal digits.",
+    "space": "O(1) auxiliary space using scalar variables.",
+    "edge_cases": "Negative numbers return false; numbers ending in 0 (other than 0 itself) cannot be palindromes."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "231A",
+    "title": "Team",
+    "url": "https://codeforces.com/contest/231/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "greedy"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "/******************************************************************************\n\nWelcome to GDB Online.\nGDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,\nC#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.\nCode, Compile, Run and Debug online from anywhere in world.\n\n*******************************************************************************/\n#include <stdio.h>\n\nint main()\n{   int n;\n    scanf(\"%d\" , &n);\n    int a[n][3];\n    for(int i=0;i<n;++i){\n        for(int j=0;j<3;++j){\n            scanf(\"%d\" , &a[i][j]);\n        }\n    }\n    int count=0;\n    for(int i=0;i<n;++i){\n        int sum=0;\n        for(int j=0;j<3;++j){\n          sum=sum+a[i][j];\n        }\n        if(sum>1){\n            count++;\n        }\n    }\n    printf(\"%d\" , count);\n\n    return 0;\n}\n",
+    "solved_date": "2026-03-11",
+    "summary": "Count how many problems will be implemented if at least two out of three team members are sure about the solution.",
+    "approach": "Iterate through each problem, sum the three opinions, and increment the counter if the sum is 2 or greater.",
+    "time": "O(n) where n is the number of problems.",
+    "space": "O(1) auxiliary space.",
+    "edge_cases": "All 0s (sum = 0) or all 1s (sum = 3)."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "282A",
+    "title": "Bit++",
+    "url": "https://codeforces.com/contest/282/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{   int n;\n    scanf(\"%d\" , &n);\n    int X = 0;\n    char s[5];\n    for(int i=0;i<n;++i){\n        scanf(\"%s\" , s);\n        if(strcmp(s , \"X++\") == 0  || strcmp(s , \"++X\") == 0){\n            X++;\n        }\n        else{\n            X--;\n        }\n    }\n    printf(\"%d\" , X);\n\n    return 0;\n}\n",
+    "solved_date": "2026-03-13",
+    "summary": "Calculate the final value of variable X starting at 0 after executing a sequence of increment and decrement statements.",
+    "approach": "For each statement, check if it contains '+' to increment X, otherwise decrement X.",
+    "time": "O(n) where n is the number of statements.",
+    "space": "O(1) auxiliary space.",
+    "edge_cases": "Initial state X = 0."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "158A",
+    "title": "Next Round",
+    "url": "https://codeforces.com/contest/158/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "*special",
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n,k;\n    scanf(\"%d %d\" , &n , &k);\n    int a[n];\n    for(int i=0;i<n;++i){\n        scanf(\"%d\" , &a[i]);\n    }\n    int count = 0;\n    for(int i=0;i<n;++i){\n        if(a[i]>=a[k-1] && a[i]>0){\n            count++;\n        }\n    }\n    printf(\"%d\" , count);\n\n    return 0;\n}",
+    "solved_date": "2026-03-16",
+    "summary": "Count how many participants advance to the next round by scoring at least as many points as the k-th place finisher and having a positive score.",
+    "approach": "Find the k-th participant's score, then iterate through the scores and count participants whose score is >= k-th score and > 0.",
+    "time": "O(n) where n is the number of participants.",
+    "space": "O(n) or O(1) space to store or stream scores.",
+    "edge_cases": "k-th place finisher has a score of 0 (no one with 0 points can advance)."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "112A",
+    "title": "Petya and Strings",
+    "url": "https://codeforces.com/contest/112/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\n\nint toUpperCase(char i){\n    int ch = i;\n    if(i>=97 && i<=122){\n        return i-32;\n    }\n    else{\n        return i;\n    }\n}\nint main()\n{\n    char str1[101];\n    char str2[101];\n    scanf(\"%s\" , str1);\n    scanf(\"%s\" , str2);\n    int i=0;\n    while(str1[i]!='\\0' && str2[i]!='\\0'){\n        if(toUpperCase(str1[i])-toUpperCase(str2[i])>0){\n            printf(\"1\");\n            break;\n        }\n        else if(toUpperCase(str1[i])-toUpperCase(str2[i])<0){\n            printf(\"-1\");\n            break;\n        }\n        ++i;\n    }\n    if(str1[i]=='\\0' && str2[i]=='\\0'){\n            printf(\"0\");\n    }\n    \n\n    return 0;\n}",
+    "solved_date": "2026-03-20",
+    "summary": "Compare two strings lexicographically in a case-insensitive manner.",
+    "approach": "Convert characters of both strings to lowercase and compare character by character, returning -1, 1, or 0.",
+    "time": "O(n) where n is the length of the strings.",
+    "space": "O(1) auxiliary space modifying strings in place.",
+    "edge_cases": "Identical strings with different casing."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "236A",
+    "title": "Boy or Girl",
+    "url": "https://codeforces.com/contest/236/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n    char str[101];\n    scanf(\"%s\" , str);\n    int length=strlen(str);\n    int count=0;\n    for(int i=0;i<length;++i){\n        int freq=0;\n        for(int j=0;j<i;++j){\n            if(str[i]==str[j]){\n               freq=1;\n               break;\n            }\n        }\n        if(freq==0){\n            count++;\n        }\n    }\n    if(count%2==0){\n        printf(\"CHAT WITH HER!\");\n    }\n    else{\n        printf(\"IGNORE HIM!\");\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Boy or Girl'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "281A",
+    "title": "Word Capitalization",
+    "url": "https://codeforces.com/contest/281/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nchar cap(char ch){\n    if(ch>='a' && ch<='z'){\n        return ch-32;\n    }\n    return ch;\n}\nint main()\n{\n    char str[1001];\n    scanf(\"%s\" , str);\n    str[0]=cap(str[0]);\n    printf(\"%s\" , str);\n\n    return 0;\n}\n",
+    "solved_date": "2026-03-26"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "791A",
+    "title": "Bear and Big Brother",
+    "url": "https://codeforces.com/contest/791/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int a,b;\n    scanf(\"%d %d\" , &a , &b);\n    int count=0;\n    while(a<=b){\n        a=a*3;\n        b=b*2;\n        count++;\n    }\n    printf(\"%d\" , count);\n\n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Bear and Big Brother'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "617A",
+    "title": "Elephant",
+    "url": "https://codeforces.com/contest/617/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n     int n;\n     scanf(\"%d\" , &n);\n     int rem;\n     int count=0;\n         if(n<5){\n         printf(\"1\");\n         return 0;\n         }\n         else{\n             rem=n%5;\n             count=count+n/5;\n             if(rem<5 && rem!=0){\n                count=count+1;\n             }\n         }\n         printf(\"%d\" , count);\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "546A",
+    "title": "Soldier and Bananas",
+    "url": "https://codeforces.com/contest/546/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int k,n,w;\n    scanf(\"%d %d %d\" , &k , &n , &w);\n    long long amount=0;\n    for(int i=1;i<=w;++i){\n        amount=amount+i*k;\n    }\n    if(amount>n){\n        printf(\"%lld\" , amount-n);\n    }\n    else{\n        printf(\"0\");\n    }\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Soldier and Bananas'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "59A",
+    "title": "Word",
+    "url": "https://codeforces.com/contest/59/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nchar changeToUpper(char ch){\n    if(ch>='a' && ch<='z'){\n        return ch-32;\n    }\n    return ch;\n} \nchar changeToLower(char ch){\n    if(ch>='A' && ch<='Z'){\n        return ch+32;\n    }\n    return ch;\n} \nint main()\n{\n    char str[101];\n    scanf(\"%s\" , str);\n    int upCount=0;\n    int lowCount=0;\n    int length=strlen(str);\n    for(int i=0;i<length;++i){\n        if(str[i]>='a' && str[i]<='z'){\n            lowCount++;\n        }\n        else if(str[i]>='A' && str[i]<='Z'){\n            upCount++;\n        }\n    }\n    for(int i=0;i<length;++i){\n        if(upCount>lowCount){\n            str[i]=changeToUpper(str[i]);\n        }\n        else{\n            str[i]=changeToLower(str[i]);\n        }\n    }\n    printf(\"%s\" , str);\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Word'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "977A",
+    "title": "Wrong Subtraction",
+    "url": "https://codeforces.com/contest/977/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n,k;\n    scanf(\"%d %d\" , &n,&k);\n    int count=0;\n    while(count<k){\n        if(n%10!=0){\n            n=n-1;\n            count++;\n        }\n        else{\n            n=n/10;\n            count++;\n        }\n    }\n    printf(\"%d\" , n);\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Wrong Subtraction'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "110A",
+    "title": "Nearly Lucky Number",
+    "url": "https://codeforces.com/contest/110/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    long long n;\n    scanf(\"%lld\" , &n);\n    int count=0;\n    while(n>0){\n        int rem=n%10; \n        if(rem==4 || rem==7){\n            count++;\n        }\n        n=n/10;\n    }\n    if(count==4 || count==7){\n        printf(\"YES\");\n    }\n    else{\n        printf(\"NO\");\n    }\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Nearly Lucky Number'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "734A",
+    "title": "Anton and Danik",
+    "url": "https://codeforces.com/contest/734/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    char str[n+1];\n    scanf(\"%s\" , str);\n    int dCount=0;\n    int aCount=0;\n    for(int i=0;i<n;++i){\n        if(str[i]=='D'){\n            dCount++;\n        }\n        else if(str[i]=='A'){\n            aCount++;\n        }\n    }\n    if(aCount>dCount){\n        printf(\"Anton\");\n    }\n    else if(aCount<dCount){\n        printf(\"Danik\");\n    }\n    else{\n        printf(\"Friendship\");\n    }\n     \n    return 0;\n}\n",
+    "solved_date": "2026-03-26",
+    "summary": "Algorithmic solution for 'Anton and Danik'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "41A",
+    "title": "Translation",
+    "url": "https://codeforces.com/contest/41/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n    char s[101];\n    char t[101];\n    scanf(\"%s %s\" , s , t);\n    int length1=strlen(s);\n    int length2=strlen(t);\n    if(length1!=length2){\n        printf(\"NO\");\n        return 0;\n    }\n    for(int i=0;i<length1;++i){\n        if(s[i]!=t[length1-i-1]){\n              printf(\"NO\");\n              return 0;\n        }\n    }\n    printf(\"YES\");\n\n    return 0;\n}",
+    "solved_date": "2026-03-27",
+    "summary": "Algorithmic solution for 'Translation'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "677A",
+    "title": "Vanya and Fence",
+    "url": "https://codeforces.com/contest/677/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n    int n,h;\n    scanf(\"%d %d\" , &n,&h);\n    int width=0;\n    for(int i=0;i<n;++i){\n        int num;\n        scanf(\"%d\" , &num);\n        if(num>h){\n            width=width+2;\n        }\n        else{\n            width++;\n        }\n    }\n    printf(\"%d\" , width);\n\n    return 0;\n}",
+    "solved_date": "2026-03-27",
+    "summary": "Algorithmic solution for 'Vanya and Fence'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1030A",
+    "title": "In Search of an Easy Problem",
+    "url": "https://codeforces.com/contest/1030/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int sum=0;\n    for(int i=1;i<=n;++i){\n        int x;\n        scanf(\"%d\" , &x);\n        sum=sum+x;\n    }\n    if(sum==0){\n        printf(\"easy\");\n    }\n    else{\n        printf(\"hard\");\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-03-27",
+    "summary": "Algorithmic solution for 'In Search of an Easy Problem'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "467A",
+    "title": "George and Accommodation",
+    "url": "https://codeforces.com/contest/467/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int count=0;\n    for(int i=1;i<=n;++i){\n        int p,q;\n        scanf(\"%d %d\" , &p,&q);\n        if(q-p>=2){\n            count++;\n        }\n    }\n    printf(\"%d\" , count);\n    return 0;\n}",
+    "solved_date": "2026-03-27",
+    "summary": "Algorithmic solution for 'George and Accommodation'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "486A",
+    "title": "Calculating Function",
+    "url": "https://codeforces.com/contest/486/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    long long n;\n    scanf(\"%lld\" , &n);\n    long long sum=0;\n    if(n%2==0){\n        sum=n/2;\n    }\n    else{\n        sum=(n-1)/2+(-1)*n;\n    }\n    printf(\"%lld\" , sum);\n    \n    return 0;\n}",
+    "solved_date": "2026-03-27"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1328A",
+    "title": "Divisibility Problem",
+    "url": "https://codeforces.com/contest/1328/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int res;\n    for(int i=1;i<=t;++i){\n        int a,b;\n        scanf(\"%d %d\" , &a,&b);\n        res=0;\n        int r=a%b;\n        if(r!=0){\n            res=b-r;\n        }\n        printf(\"%d\\n\" , res);\n    }\n    \n    return 0;\n}",
+    "solved_date": "2026-03-28",
+    "summary": "Algorithmic solution for 'Divisibility Problem'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "520A",
+    "title": "Pangram",
+    "url": "https://codeforces.com/contest/520/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <ctype.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    char str[n+1];\n    int seen[26]={0};\n    scanf(\"%s\" , str);\n    int count=0;\n    for(int i=0;i<n;++i){\n        char c=tolower(str[i]);\n        int index=c-'a';\n        \n        if(seen[index]==0){\n            seen[index]=1;\n            count++;\n        }\n    }\n    if(count==26){\n        printf(\"YES\");\n    }\n    else{\n        printf(\"NO\");\n    }\n    \n    \n    return 0;\n}",
+    "solved_date": "2026-03-28",
+    "summary": "Algorithmic solution for 'Pangram'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "172",
+    "title": "Factorial Trailing Zeroes",
+    "url": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+    "difficulty": "medium",
+    "tags": [
+      "math"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int trailingZeroes(int n) {\n        int count=0;\n        for(int i=5;n/i>0;i=i*5){\n            count=count+(n/i);\n        }\n        return count;\n    }\n};",
+    "solved_date": "2026-03-30",
+    "summary": "Algorithmic solution for 'Factorial Trailing Zeroes'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "469A",
+    "title": "I Wanna Be the Guy",
+    "url": "https://codeforces.com/contest/469/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n,p,q,x;\n    scanf(\"%d\" , &n);\n    int seen[n+1];\n    for(int i=1;i<=n;++i){\n        seen[i]=0;\n    }\n    scanf(\"%d\" , &p);\n    for(int i=0;i<p;++i){\n        scanf(\"%d\" , &x);\n        seen[x]=1;\n    }\n    scanf(\"%d\" , &q);\n    for(int i=0;i<q;++i){\n        scanf(\"%d\" , &x);\n        seen[x]=1;\n    }\n    int count=0;\n    for(int i=1;i<=n;++i){\n        if(seen[i]==0){\n            printf(\"Oh, my keyboard!\");\n            return 0;\n        }\n    }\n    printf(\"I become the guy.\");\n    \n\n    return 0;\n}\n",
+    "solved_date": "2026-03-30",
+    "summary": "Algorithmic solution for 'I Wanna Be the Guy'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "144A",
+    "title": "Arrival of the General",
+    "url": "https://codeforces.com/contest/144/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <limits.h>\n\nint main()\n{\n    int n , res;\n    scanf(\"%d\" , &n);\n    int a[n];\n    for(int i=0;i<n;++i){\n        scanf(\"%d\" , &a[i]);\n    }\n    int max=INT_MIN;\n    int maxIndex,minIndex;\n    int min = INT_MAX;\n    for(int i=0;i<n;++i){\n        if(a[i]>max){\n            max=a[i];\n            maxIndex=i;\n        }\n    }\n    for(int i=0;i<n;++i){\n        if(a[i]<=min){\n            min=a[i];\n            minIndex=i;\n        }\n    }\n    int num1 = maxIndex-0;\n    int num2 = (n-1) - minIndex;\n    \n    if(maxIndex>minIndex){\n        res=num1+num2-1;\n    }\n    else{\n        res=num1+num2;\n    }\n    printf(\"%d\" , res);\n\n    return 0;\n}\n\n\n",
+    "solved_date": "2026-03-31",
+    "summary": "Algorithmic solution for 'Arrival of the General'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "996A",
+    "title": "Hit the Lottery",
+    "url": "https://codeforces.com/contest/996/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "dp",
+      "greedy"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int count=0;\n    if(n>=100){\n        count=count+n/100;\n        n=n%100;\n    }\n    if(n>=20){\n        count=count+n/20;\n        n=n%20;\n    }\n    if(n>=10){\n        count=count+n/10;\n        n=n%10;\n    }\n    if(n>=5){\n        count=count+n/5;\n        n=n%5;\n    }\n    if(n<5){\n        count=count+n;\n    }\n    printf(\"%d\" , count);\n    return 0;\n}\n\n\n",
+    "solved_date": "2026-03-31"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "148A",
+    "title": "Insomnia cure",
+    "url": "https://codeforces.com/contest/148/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int k,l,m,n,d;\n    scanf(\"%d %d %d %d %d\" , &k,&l,&m,&n,&d);\n    int count=0;\n    for(int i=1;i<=d;++i){\n        if((i%k==0) || (i%l==0) || (i%m==0) || (i%n==0)){\n            count++;\n        }\n    }\n    printf(\"%d\" , count);\n    \n    return 0;\n}\n\n\n",
+    "solved_date": "2026-03-31",
+    "summary": "Algorithmic solution for 'Insomnia cure'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "785A",
+    "title": "Anton and Polyhedrons",
+    "url": "https://codeforces.com/contest/785/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    char str[n][13];\n    for(int i=0;i<n;++i){\n        scanf(\"%s\" , str[i]);\n    }\n    int sum=0;\n    for(int i=0;i<n;++i){\n        if(strcmp(str[i] , \"Tetrahedron\")==0){\n            sum=sum+4;\n        }\n        else if(strcmp(str[i] , \"Cube\")==0){\n            sum=sum+6;\n        }\n        else if(strcmp(str[i] , \"Octahedron\")==0){\n            sum=sum+8;\n        }\n        else if(strcmp(str[i] , \"Dodecahedron\")==0){\n            sum=sum+12;\n        }\n        else if(strcmp(str[i] , \"Icosahedron\")==0){\n            sum=sum+20;\n        }\n    }\n    printf(\"%d\" , sum);\n    \n    return 0;\n}\n\n\n",
+    "solved_date": "2026-03-31",
+    "summary": "Algorithmic solution for 'Anton and Polyhedrons'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1742A",
+    "title": "Sum",
+    "url": "https://codeforces.com/contest/1742/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    \n    for(int i=1;i<=t;++i){\n        int a,b,c;\n        scanf(\"%d %d %d\" , &a,&b,&c);\n        if(a==b+c || b==a+c || c==a+b){\n            printf(\"YES\\n\");\n        }\n        else{\n            printf(\"NO\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-01",
+    "summary": "Algorithmic solution for 'Sum'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "723A",
+    "title": "The New Year: Meeting Friends",
+    "url": "https://codeforces.com/contest/723/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math",
+      "sortings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int x1,x2,x3,min,max,middle,dist;\n    scanf(\"%d %d %d\" , &x1,&x2,&x3);\n    if(x1>x2 && x1>x3){\n        if(x2>x3){\n            min=x3;\n        }\n        else{\n            min=x2;\n        }\n        max=x1;\n    }\n    else if(x2>x1 && x2>x3){\n        if(x1>x3){\n            min=x3;\n        }\n        else{\n            min=x1;\n        }\n        max=x2;\n    }\n    else if(x3>x1 && x3>x2){\n        if(x2>x1){\n            min=x1;\n        }\n        else{\n            min=x2;\n        }\n        max=x3;\n    }\n    dist=(max-min);\n    printf(\"%d\" , dist);\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-01"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1703A",
+    "title": "YES or YES?",
+    "url": "https://codeforces.com/contest/1703/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nchar toUpperCase(char ch){\n    if(ch>='a' && ch<='z'){\n        return ch-32;\n    }\n    return ch;\n}\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    char str[t][4];\n    for(int i=0;i<t;++i){\n        scanf(\"%s\" , str[i]);\n        for(int j=0;j<3;++j){\n            str[i][j]=toUpperCase(str[i][j]);\n        }\n        if(str[i][0]=='Y' && str[i][1]=='E' && str[i][2]=='S'){\n           printf(\"YES\\n\");\n        }\n        else{\n           printf(\"NO\\n\");\n        }\n    }\n    \n\n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'YES or YES?'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "151A",
+    "title": "Soft Drinking",
+    "url": "https://codeforces.com/contest/151/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n,k,l,c,d,p,nl,np,max,min;\n    scanf(\"%d %d %d %d %d %d %d %d\" , &n,&k,&l,&c,&d,&p,&nl,&np);\n    int toast_drinks = (k*l)/nl;\n    int toast_slices = c*d;\n    int toast_salt = p/np;\n    \n    max=min=toast_drinks;\n    if(min>toast_slices){min=toast_slices;}\n    if(max<toast_slices){max=toast_slices;}\n    \n    if(min>toast_salt){min=toast_salt;}\n    if(max<toast_salt){max=toast_salt;}\n    int res=min/n;\n    \n    printf(\"%d\" , res);\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "155A",
+    "title": "I_love_\\%username\\%",
+    "url": "https://codeforces.com/contest/155/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int ar[n];\n    for(int i=0;i<n;++i){\n        scanf(\"%d\" , &ar[i]);\n    }\n    int flag;\n    int count=0;\n    int minCount=0;\n    int maxCount=0;\n    for(int i=n-1;i>=1;--i){\n        flag=0;\n        maxCount=0;\n        minCount=0;\n        for(int j=0;j<i;++j){\n            if(ar[i]>ar[j]){\n                maxCount++;\n            }\n        }\n        \n        if(maxCount==i){\n            flag=1;\n        }\n        \n        if(flag==0){\n            for(int j=0;j<i;++j){\n               if(ar[i]<ar[j]){\n                  minCount++;\n               }\n            }\n            if(minCount==i){\n               flag=1;\n            }\n        }\n        if(flag){\n            count++;\n        }\n    }\n    printf(\"%d\" , count);\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'I_love_\\%username\\%'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "750A",
+    "title": "New Year and Hurry",
+    "url": "https://codeforces.com/contest/750/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "binary search",
+      "brute force",
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int k;\n    scanf(\"%d\" , &k);\n    int timeSum=0;\n    int count =0;\n    for(int i=1; ;++i){\n        timeSum=timeSum+i*5;\n        if(240-timeSum>=k && count<n){\n            count++;\n        }\n        else{\n            break;\n        }\n    }\n    printf(\"%d\" , count);\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'New Year and Hurry'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "630A",
+    "title": "Again Twenty Five!",
+    "url": "https://codeforces.com/contest/630/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "number theory"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    printf(\"25\");\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "732A",
+    "title": "Buy a Shovel",
+    "url": "https://codeforces.com/contest/732/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int k,r;\n    scanf(\"%d %d\" , &k,&r);\n    int count=0;\n    int i=1;\n    while((k*i)%10!=r && (k*i)%10!=0){\n        count++;\n        i++;\n    }\n    printf(\"%d\" , count+1);\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'Buy a Shovel'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1669A",
+    "title": "Division?",
+    "url": "https://codeforces.com/contest/1669/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <limits.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int rating[t];\n    for(int i=0;i<t;++i){\n        scanf(\"%d\" , &rating[i]);\n    }\n    for(int i=0;i<t;++i){\n        if(rating[i]<=1399){\n            printf(\"Division 4\\n\");\n        }\n        else if(1400<=rating[i] && rating[i]<=1599){\n            printf(\"Division 3\\n\");\n        }\n        else if(1600<=rating[i] && rating[i]<=1899){\n            printf(\"Division 2\\n\");\n        }\n        else{\n            printf(\"Division 1\\n\");\n        }\n    }\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'Division?'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1676A",
+    "title": "Lucky?",
+    "url": "https://codeforces.com/contest/1676/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <limits.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    char str[t][7];\n    for(int i=0;i<t;++i){\n        scanf(\"%s\" , str[i]);\n    }\n    for(int i=0;i<t;++i){\n        int leftSum=str[i][0]+str[i][1]+str[i][2];\n        int rightSum=str[i][3]+str[i][4]+str[i][5];\n        if(rightSum == leftSum){\n            printf(\"yes\\n\");\n        }\n        else{\n            printf(\"no\\n\");\n        }\n    }\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'Lucky?'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1692A",
+    "title": "Marathon",
+    "url": "https://codeforces.com/contest/1692/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <limits.h>\n\nint main()\n{\n    int t,a,b,c,d;\n    scanf(\"%d\" , &t);\n    int count;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d %d %d\" , &a,&b,&c,&d);\n        count=0;\n        if(a<b){\n           count++;\n        }\n        if(a<c){\n           count++;\n        }\n        if(a<d){\n           count++;\n        }\n        printf(\"%d\\n\" , count);\n    }\n    \n    return 0;\n}\n",
+    "solved_date": "2026-04-02",
+    "summary": "Algorithmic solution for 'Marathon'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "581A",
+    "title": "Vasya the Hipster",
+    "url": "https://codeforces.com/contest/581/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int a,b,min,max;\n    scanf(\"%d %d\" , &a,&b);\n    if(a>b){\n        min=b;\n        max=a;\n    }\n    else{\n        min=a;\n        max=b;\n    }\n    int daysDiffSocks = min;\n    int daysSameSocks = (max-min)/2;\n    printf(\"%d %d\" , daysDiffSocks , daysSameSocks);\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1807A",
+    "title": "Plus or Minus",
+    "url": "https://codeforces.com/contest/1807/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t,a,b,c;\n    scanf(\"%d\" , &t);\n    \n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d %d\" , &a,&b,&c);\n        if(a+b==c){\n            printf(\"+\\n\");\n        }\n        else{\n            printf(\"-\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Plus or Minus'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1999A",
+    "title": "A+B Again?",
+    "url": "https://codeforces.com/contest/1999/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int n,sum;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d\" , &n);\n        sum=n/10+n%10;\n        printf(\"%d\\n\" , sum);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'A+B Again?'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1791A",
+    "title": "Codeforces Checking",
+    "url": "https://codeforces.com/contest/1791/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    char str[11]=\"codeforces\";\n    char ch;\n    int flag;\n    for(int i=0;i<t;++i){\n        scanf(\" %c\" , &ch);\n        flag=0;\n        for(int j=0;j<10;++j){\n            if(str[j] == ch){\n                flag=1;\n                break;\n            }\n        }\n        if(flag){\n            printf(\"YES\\n\");\n        }\n        else{\n            printf(\"NO\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Codeforces Checking'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1760A",
+    "title": "Medium Number",
+    "url": "https://codeforces.com/contest/1760/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "sortings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t,a,b,c;\n    scanf(\"%d\" , &t);\n    int middle;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d %d\" , &a,&b,&c);\n        if((a>=b && a<=c) || (a>=c && a<=b)){\n            middle=a;\n        }\n        else if((b>=a && b<=c) || (b>=c && b<=a)){\n            middle=b;\n        }\n        else{\n            middle=c;\n        }\n        \n        printf(\"%d\\n\" , middle);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Medium Number'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "32B",
+    "title": "Borze",
+    "url": "https://codeforces.com/contest/32/problem/B",
+    "difficulty": "easy",
+    "tags": [
+      "expression parsing",
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n    char str[201];\n    scanf(\"%s\" , str);\n    int length = strlen(str);\n    for(int i=0;i<length;++i){\n        if(str[i] == '-'){\n            if(str[i+1] == '-'){\n                printf(\"2\");\n                i++;\n            }\n            else{\n                printf(\"1\");\n                i++;\n            }\n        }\n        else{\n            printf(\"0\");\n        }\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Borze'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1915A",
+    "title": "Odd One Out",
+    "url": "https://codeforces.com/contest/1915/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "bitmasks",
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t,a,b,c,diff;\n    scanf(\"%d\" , &t);\n    for(int i=0;i<t;++i){\n        scanf(\"%d %d %d\" , &a,&b,&c);\n        if(a==b){\n            diff=c;\n        }\n        else if(a==c){\n            diff=b;\n        }\n        else if(b==c){\n            diff=a;\n        }\n        printf(\"%d\\n\" ,diff);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Odd One Out'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "758A",
+    "title": "Holiday Of Equality",
+    "url": "https://codeforces.com/contest/758/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n#include <limits.h>\n\nint main()\n{\n    int n;\n    scanf(\"%d\" , &n);\n    int a[n];\n    for(int i=0;i<n;++i){\n        scanf(\"%d\" , &a[i]);\n    }\n    int max=INT_MIN;\n    for(int i=0;i<n;++i){\n        if(max<a[i]){\n            max=a[i];\n        }\n    }\n    int sum=0;\n    for(int i=0;i<n;++i){\n        sum=sum+(max-a[i]);\n    }\n    printf(\"%d\" , sum);\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'Holiday Of Equality'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1850A",
+    "title": "To My Critics",
+    "url": "https://codeforces.com/contest/1850/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "sortings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int a,b,c;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d %d\" , &a,&b,&c);\n        if(a+b>=10){\n            printf(\"YES\\n\");\n        }\n        else if(a+c>=10){\n            printf(\"YES\\n\");\n        }\n        else if(c+b>=10){\n            printf(\"YES\\n\");\n        }\n        else{\n            printf(\"NO\\n\");\n        }\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-03",
+    "summary": "Algorithmic solution for 'To My Critics'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1901A",
+    "title": "Line Trip",
+    "url": "https://codeforces.com/contest/1901/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int n,x,max;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d\" , &n,&x);\n        int a[n];\n        int firstDiff;\n        int lastDiff;\n        for(int j=0;j<n;++j){\n            scanf(\"%d\" , &a[j]);\n        }\n        firstDiff=a[0]-0;\n        lastDiff=2*(x-a[n-1]);\n        int maxDiff=0;\n        for(int j=0;j<n-1;++j){\n            int gap=a[j+1]-a[j];\n            if(gap>maxDiff){\n                maxDiff=gap;\n            }\n        }\n        max=firstDiff;\n        if(max<lastDiff){max=lastDiff;}\n        if(max<maxDiff){max=maxDiff;}\n        \n        printf(\"%d\\n\" , max);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-04",
+    "summary": "Algorithmic solution for 'Line Trip'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1560A",
+    "title": "Dislike of Threes",
+    "url": "https://codeforces.com/contest/1560/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int k,count=0;\n    int a[1000];\n    int i=1;\n    int j=0;\n    while(1){\n        if(i%3!=0 && i%10!=3){\n            a[j]=i;\n            j++;\n            count++;\n            if(count==1000){\n                break;\n            }\n        }\n        i++; \n    }\n    for(int i=1;i<=t;++i){\n        scanf(\"%d\" , &k);\n        printf(\"%d\\n\" , a[k-1]);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-04",
+    "summary": "Algorithmic solution for 'Dislike of Threes'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "2009A",
+    "title": "Minimize!",
+    "url": "https://codeforces.com/contest/2009/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    int t;\n    scanf(\"%d\" , &t);\n    int a,b;\n    for(int i=1;i<=t;++i){\n        scanf(\"%d %d\" ,&a,&b);\n        printf(\"%d\\n\" , b-a);\n    }\n\n    return 0;\n}\n",
+    "solved_date": "2026-04-04",
+    "summary": "Algorithmic solution for 'Minimize!'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "96A",
+    "title": "Football",
+    "url": "https://codeforces.com/contest/96/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <string.h>\n#include <stdio.h>\n\nint main()\n{\n    char str[100];\n    scanf(\"%s\" , str);\n    int length = strlen(str);\n    int count=0;\n    for(int i=0;i<length-1;++i){\n        if(str[i]==str[i+1]){\n            count++;\n            if(count==6){\n               printf(\"YES\");\n               return 0;\n            }\n        }\n        else{\n            count=0;\n        }\n    }\n    printf(\"NO\");\n    \n\n    return 0;\n}\n",
+    "solved_date": "2026-04-04",
+    "summary": "Algorithmic solution for 'Football'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "2218A",
+    "title": "The 67th Integer Problem",
+    "url": "https://codeforces.com/contest/2218/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "games",
+      "implementation",
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main(){\n    int t;\n    scanf(\"%d\" , &t);\n    int x;\n    while(t--){\n        scanf(\"%d\" , &x);\n        printf(\"%d\\n\" , x);\n    }\n    \n    return 0;\n}",
+    "solved_date": "2026-04-04",
+    "summary": "Algorithmic solution for 'The 67th Integer Problem'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "2218B",
+    "title": "The 67th 6-7 Integer Problem",
+    "url": "https://codeforces.com/contest/2218/problem/B",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "math"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main()\n{\n    int t;\n    cin >> t;\n    vector<int> a(7);\n    while(t--){\n        for(int i=0;i<7;++i){\n            cin >> a[i];\n        }\n        sort(a.begin() , a.end());\n        int sum=0;\n        for(int i=0;i<6;++i){\n            a[i] = a[i]*(-1);\n            sum=sum+a[i];\n        }\n        sum=sum+a[6];\n        cout << sum <<endl;\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-04",
+    "summary": "Solve 'The 67th 6-7 Integer Problem' by sorting the elements first.",
+    "approach": "Sort the input array to order elements, then process sequentially or with two pointers.",
+    "time": "O(n log n) dominated by the sorting step.",
+    "space": "O(1) to O(n) depending on the sort implementation.",
+    "edge_cases": "Already sorted array, reverse sorted array, duplicate elements."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "58",
+    "title": "Length of Last Word",
+    "url": "https://leetcode.com/problems/length-of-last-word/",
+    "difficulty": "easy",
+    "tags": [
+      "string"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        int size = s.size();\n        int i=size-1;\n        int count=0;\n        while(i>=0 && s[i] == ' '){\n            i--;\n        }\n        while(i>=0 && s[i] != ' '){\n            count++;\n            i--;\n        }\n        return count;\n    }\n};",
+    "solved_date": "2026-04-05",
+    "summary": "Algorithmic solution for 'Length of Last Word'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "318A",
+    "title": "Even Odds",
+    "url": "https://codeforces.com/contest/318/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math"
+    ],
+    "language": "GNU C11",
+    "ext": "c",
+    "code": "#include <stdio.h>\n\nint main()\n{\n    long long n,k;\n    scanf(\"%lld %lld\" ,&n,&k);\n    long long mid=(n+1)/2;\n    if(k<=mid){\n        printf(\"%lld\" , 2*k-1);\n    }\n    else if(k>mid){\n        printf(\"%lld\" , 2*(k-mid));\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-07"
+  },
+  {
+    "platform": "Codeforces",
+    "id": "160A",
+    "title": "Twins",
+    "url": "https://codeforces.com/contest/160/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "sortings"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <algorithm>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> v(n);\n    int totalSum=0;\n    for(int i=0;i<n;++i){\n        cin>>v[i];\n        totalSum+=v[i];\n    }\n    int maxSum = 0;\n    int count = 0;\n    sort(v.begin() , v.end());\n    for(int i=n-1;i>=0;--i){\n        maxSum=maxSum+v[i];\n        if(maxSum<=(totalSum-maxSum)){\n            count++;\n        }\n        else{\n            break;\n        }\n    }\n    cout<<count+1;\n\n    return 0;\n}",
+    "solved_date": "2026-04-07",
+    "summary": "Solve 'Twins' by sorting the elements first.",
+    "approach": "Sort the input array to order elements, then process sequentially or with two pointers.",
+    "time": "O(n log n) dominated by the sorting step.",
+    "space": "O(1) to O(n) depending on the sort implementation.",
+    "edge_cases": "Already sorted array, reverse sorted array, duplicate elements."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "133A",
+    "title": "HQ9+",
+    "url": "https://codeforces.com/contest/133/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    string p;\n    cin >> p;\n    int length = p.length();\n    for(int i=0;i<length;++i){\n        if(p[i]=='H' || p[i]=='Q' || p[i]=='9'){\n            printf(\"YES\");\n            return 0;\n        }\n    }\n    printf(\"NO\");\n\n    return 0;\n}",
+    "solved_date": "2026-04-07",
+    "summary": "Algorithmic solution for 'HQ9+'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "405A",
+    "title": "Gravity Flip",
+    "url": "https://codeforces.com/contest/405/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <algorithm>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> v(n);\n    for(int i=0;i<n;++i){\n        cin >> v[i];\n    }\n    sort(v.begin() , v.end());\n    for(int i=0;i<n;++i){\n        cout << v[i] << \" \";\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-07",
+    "summary": "Solve 'Gravity Flip' by sorting the elements first.",
+    "approach": "Sort the input array to order elements, then process sequentially or with two pointers.",
+    "time": "O(n log n) dominated by the sorting step.",
+    "space": "O(1) to O(n) depending on the sort implementation.",
+    "edge_cases": "Already sorted array, reverse sorted array, duplicate elements."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "71A",
+    "title": "Way Too Long Words",
+    "url": "https://codeforces.com/contest/71/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "strings"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    string str;\n    for(int i=0;i<n;++i){\n        cin >> str;\n        int length = str.length();\n        int reqLength = length-2;\n        if(length>10){\n           cout << str[0] << reqLength << str[length-1] << endl;\n        }\n        else{\n           cout << str << endl;\n        }\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-07",
+    "summary": "Algorithmic solution for 'Way Too Long Words'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "580A",
+    "title": "Kefa and First Steps",
+    "url": "https://codeforces.com/contest/580/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "dp",
+      "implementation"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main()\n{\n    int n;\n    cin >> n;\n    vector<int> v(n);\n    for(int i=0;i<n;++i){\n        cin >> v[i];\n    }\n    int count = 0;\n    int maxCount = 0;\n    int flag=0;\n    for(int i=0;i<n-1;++i){\n        if(v[i]<=v[i+1]){\n            count++;\n        }\n        else{\n            maxCount=max(maxCount , count);\n            count=0;\n        }\n    }\n    maxCount=max(maxCount , count);\n    \n    cout << maxCount+1;\n    \n    return 0;\n}",
+    "solved_date": "2026-04-09",
+    "summary": "Algorithmic solution for 'Kefa and First Steps'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1475A",
+    "title": "Odd Divisor",
+    "url": "https://codeforces.com/contest/1475/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "number theory"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    long long t,n;\n    cin >> t;\n    \n    while(t--){\n        cin >> n;\n        if((n&(n-1))==0){\n            cout << \"NO\" << endl;\n        }\n        else{\n            cout << \"YES\" << endl;\n        }\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-10",
+    "summary": "Algorithmic solution for 'Odd Divisor'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "34B",
+    "title": "Sale",
+    "url": "https://codeforces.com/contest/34/problem/B",
+    "difficulty": "easy",
+    "tags": [
+      "greedy",
+      "sortings"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main()\n{\n    int n,m;\n    cin >> n >> m;\n    vector<int> v(n);\n    for(int i=0;i<n;++i){\n        cin >> v[i];\n    }\n    sort(v.begin() , v.end());\n    \n    int sum = 0;\n    if(v[0]<0){\n        int i=0;\n        while(v[i]<0 && i<m && i<n){\n            sum=sum+v[i];\n            i++;\n        }\n        if(sum<0){\n           sum = sum*(-1);\n        }\n    }\n    \n    cout << sum;\n\n    return 0;\n}",
+    "solved_date": "2026-04-11",
+    "summary": "Solve 'Sale' by sorting the elements first.",
+    "approach": "Sort the input array to order elements, then process sequentially or with two pointers.",
+    "time": "O(n log n) dominated by the sorting step.",
+    "space": "O(1) to O(n) depending on the sort implementation.",
+    "edge_cases": "Already sorted array, reverse sorted array, duplicate elements."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1985A",
+    "title": "Creating Words",
+    "url": "https://codeforces.com/contest/1985/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation",
+      "strings"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\n#include <string>\n#include <algorithm>\nusing namespace std;\n\nint main()\n{\n    int t;\n    string a ,b;\n    cin >> t;\n    \n    while(t--){\n        cin >> a >> b;\n        swap(a[0] , b[0]);\n        cout << a << \" \" << b << endl;\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-12",
+    "summary": "Algorithmic solution for 'Creating Words'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "1873A",
+    "title": "Short Sort",
+    "url": "https://codeforces.com/contest/1873/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "brute force",
+      "implementation"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    \n    while (t--) {\n        string s;\n        cin >> s;\n        \n        if (s == \"abc\") {\n            cout << \"YES\\n\";\n            continue;\n        }\n        \n        bool ok = false;\n        \n        // Try all possible swaps\n        swap(s[0], s[1]);\n        if (s == \"abc\") ok = true;\n        swap(s[0], s[1]); // revert\n        \n        swap(s[1], s[2]);\n        if (s == \"abc\") ok = true;\n        swap(s[1], s[2]);\n        \n        swap(s[0], s[2]);\n        if (s == \"abc\") ok = true;\n        swap(s[0], s[2]);\n        \n        cout << (ok ? \"YES\\n\" : \"NO\\n\");\n    }\n    \n    return 0;\n}",
+    "solved_date": "2026-04-13",
+    "summary": "Algorithmic solution for 'Short Sort'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "472A",
+    "title": "Design Tutorial: Learn from Math",
+    "url": "https://codeforces.com/contest/472/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "number theory"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\nusing namespace std;\n\nint isComposite(int num){\n    int count=0;\n    for(int i=2;i*i<=num;++i){\n        if(num%i==0){\n            count++;\n        }\n    }\n    if(count){\n        return true;\n    }\n    return false;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    for(int i=4;i<n;++i){\n        int j=n-i;\n        if(isComposite(i) && isComposite(j)){\n            cout << i << \" \" << j;\n            break;\n        }\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-14",
+    "summary": "Algorithmic solution for 'Design Tutorial: Learn from Math'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "703A",
+    "title": "Mishka and Game",
+    "url": "https://codeforces.com/contest/703/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n,m,c;\n    cin >> n;\n    int mCount = 0;\n    int cCount = 0;\n    for(int i=1;i<=n;++i){\n        cin >> m >> c;\n        if(m>c){\n            mCount++;\n        }\n        else if(m<c){\n            cCount++;\n        }\n    }\n    if(mCount>cCount){\n        cout << \"Mishka\" << endl;\n    }\n    else if(mCount<cCount){\n        cout << \"Chris\" << endl;\n    }\n    else{\n        cout << \"Friendship is magic!^^\" << endl;\n    }\n\n    return 0;\n}",
+    "solved_date": "2026-04-15",
+    "summary": "Algorithmic solution for 'Mishka and Game'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "Codeforces",
+    "id": "263A",
+    "title": "Beautiful Matrix",
+    "url": "https://codeforces.com/contest/263/problem/A",
+    "difficulty": "easy",
+    "tags": [
+      "implementation"
+    ],
+    "language": "C++17 (GCC 7-32)",
+    "ext": "cpp",
+    "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x, row, col;\n    \n    for(int i = 1; i <= 5; i++) {\n        for(int j = 1; j <= 5; j++) {\n            cin >> x;\n            if(x == 1) {\n                row = i;\n                col = j;\n            }\n        }\n    }\n    \n    cout << abs(row - 3) + abs(col - 3) << endl;\n    return 0;\n}",
+    "solved_date": "2026-04-16",
+    "summary": "Algorithmic solution for 'Beautiful Matrix'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "704",
+    "title": "Binary Search",
+    "url": "https://leetcode.com/problems/binary-search/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        int length = nums.size();\n        int l = 0 , h = length-1;\n        while(l<=h){\n            int mid = (l+h)/2;\n            if(nums[mid] == target){return mid;}\n            if(nums[mid]>target){\n                h = mid - 1;\n            }\n            else{\n                l = mid + 1;\n            }\n        }\n        return -1;\n    }\n};",
+    "solved_date": "2026-05-20",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "35",
+    "title": "Search Insert Position",
+    "url": "https://leetcode.com/problems/search-insert-position/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        int n = nums.size();\n        int index = INT_MIN;\n        int start = 0 , end = n-1;\n        while(start <= end){\n            int mid = (start+end)/2;\n            if(nums[mid] == target){\n                return mid;\n            }\n            else if(nums[mid] > target){\n                index = mid;\n                end = mid - 1;\n            }\n            else if(nums[mid] < target){\n                index = mid + 1;\n                start = mid + 1;\n            }\n        }\n        return index;\n    }\n};",
+    "solved_date": "2026-06-09",
+    "summary": "Algorithmic solution for 'Search Insert Position'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "34",
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> searchRange(vector<int>& nums, int target) {\n        vector<int> v(2 , -1);\n        int n = nums.size();\n        int start = 0 , end = n-1;\n        \n        while(start <= end){\n            int mid = (start + end) / 2;\n            if(nums[mid] == target){\n                v[0] = mid;\n                end = mid - 1;\n            }\n            else if(nums[mid] > target){\n                end = mid - 1;\n            }\n            else if(nums[mid] < target){\n                start = mid + 1;\n            }\n        }\n\n        start = 0;\n        end = n-1;\n        \n        while(start <= end){\n            int mid = (start + end) / 2;\n            if(nums[mid] == target){\n                v[1] = mid;\n                start = mid + 1;\n            }\n            else if(nums[mid] > target){\n                end = mid - 1;\n            }\n            else if(nums[mid] < target){\n                start = mid + 1;\n            }\n        }\n        return v;\n    }\n};",
+    "solved_date": "2026-06-09",
+    "summary": "Algorithmic solution for 'Find First and Last Position of Element in Sorted Array'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "162",
+    "title": "Find Peak Element",
+    "url": "https://leetcode.com/problems/find-peak-element/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int findPeakElement(vector<int>& nums) {\n        int n = nums.size();\n        int start = 1 , end = n-2;\n        if(n == 1){\n            return 0;\n        }\n        if(nums[0] > nums[1]){\n            return 0;\n        }\n        if(nums[n-1] > nums[n-2]){\n            return n-1;\n        }\n\n        while(start <= end){\n            int mid = (start + end) / 2;\n\n            if(nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]){\n                return mid;\n            }\n            if(nums[mid-1] > nums[mid]){\n                end = mid - 1;\n            }\n            else{\n                start = mid + 1;\n            }\n        }\n        return -1;\n    }\n};",
+    "solved_date": "2026-06-09",
+    "summary": "Algorithmic solution for 'Find Peak Element'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "540",
+    "title": "Single Element in a Sorted Array",
+    "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int singleNonDuplicate(vector<int>& nums) {\n        int n = nums.size();\n        int start = 1 , end = n-2;\n        \n        if(n == 1){\n            return nums[0];\n        }\n        if(nums[0] != nums[1]){\n            return nums[0];\n        }\n        if(nums[n-2] != nums[n-1]){\n            return nums[n-1];\n        }\n        \n        while(start <= end){\n            int mid = (start + end) / 2;\n\n            if(nums[mid-1] != nums[mid] && nums[mid+1] != nums[mid]){\n                return nums[mid];\n            }\n            if(nums[mid] == nums[mid-1]){\n                mid = mid-1;\n            }\n            if(mid % 2 == 0){\n                start = start + 2;\n            }\n            else{\n                end = end - 1;\n            }\n        }\n        return -1;\n    }\n};",
+    "solved_date": "2026-06-09",
+    "summary": "Algorithmic solution for 'Single Element in a Sorted Array'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "69",
+    "title": "Sqrt(x)",
+    "url": "https://leetcode.com/problems/sqrtx/",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "binary-search",
+      "newtons-method"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int mySqrt(int x) {\n        int start = 1 , end = x , ans = 0;\n\n        while(start <= end){\n            int mid = start + (end - start) / 2;\n\n            if(mid <= (x/mid)){\n                ans = mid;\n                start = mid + 1;\n            }\n            else{\n                end = mid - 1;\n            }\n        }\n        return ans;\n    }\n};",
+    "solved_date": "2026-06-09",
+    "summary": "Algorithmic solution for 'Sqrt(x)'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "367",
+    "title": "Valid Perfect Square",
+    "url": "https://leetcode.com/problems/valid-perfect-square/",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "binary-search"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    bool isPerfectSquare(int num) {\n        long long start = 1 , end = num;\n\n        while(start <= end){\n            long long mid = start + (end - start)/2;\n\n            if(mid == num/mid && num % mid == 0){\n                return true;\n            }\n            else if(mid >= (num/mid)){\n                end = mid - 1;\n            }\n            else{\n                start = mid + 1;\n            }\n        }\n        return false;\n    }\n};",
+    "solved_date": "2026-06-11",
+    "summary": "Algorithmic solution for 'Valid Perfect Square'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "278",
+    "title": "First Bad Version",
+    "url": "https://leetcode.com/problems/first-bad-version/",
+    "difficulty": "easy",
+    "tags": [
+      "binary-search",
+      "interactive"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "// The API isBadVersion is defined for you.\n// bool isBadVersion(int version);\n\nclass Solution {\npublic:\n    int firstBadVersion(int n) {\n        int start = 1 , end = n , ans = 0;\n\n        while(start <= end){\n            int mid = start + (end-start)/2;\n\n            if(isBadVersion(mid)){\n                ans = mid;\n                end = mid - 1;\n            }\n            else{\n                start = mid + 1;\n            }\n        }\n        return ans;\n    }\n};",
+    "solved_date": "2026-06-11",
+    "summary": "Algorithmic solution for 'First Bad Version'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "374",
+    "title": "Guess Number Higher or Lower",
+    "url": "https://leetcode.com/problems/guess-number-higher-or-lower/",
+    "difficulty": "easy",
+    "tags": [
+      "binary-search",
+      "interactive"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\nclass Solution {\npublic:\n    int guessNumber(int n) {\n        long long start = 1 , end = n;\n\n        while(start <= end){\n            long long mid = start + (end - start) / 2;\n\n            if(guess(mid) == 0){\n                return mid;\n            }\n            else if(guess(mid) == 1){\n                start = mid + 1;\n            }\n            else if(guess(mid) == -1){\n                end = mid - 1;\n            }\n        }\n        return -1;\n    }\n};",
+    "solved_date": "2026-06-11",
+    "summary": "Algorithmic solution for 'Guess Number Higher or Lower'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "137",
+    "title": "Single Number II",
+    "url": "https://leetcode.com/problems/single-number-ii/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "bit-manipulation"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "int singleNumber(int* nums, int numsSize) {\n    int uniq = 0;\n    for(int i=0;i<32;++i){\n        int count = 0;\n        for(int j=0;j<numsSize;++j){\n            if(((nums[j] >> i) & 1) == 1){\n                count++;\n            }\n        }\n        if(count % 3 == 1){\n            uniq = uniq | (1U<<i);\n        }\n    }\n    return uniq;\n}",
+    "solved_date": "2026-06-18",
+    "summary": "Algorithmic solution for 'Single Number II'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "509",
+    "title": "Fibonacci Number",
+    "url": "https://leetcode.com/problems/fibonacci-number/",
+    "difficulty": "easy",
+    "tags": [
+      "math",
+      "dynamic-programming",
+      "recursion",
+      "memoization"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int fib(int n) {\n        if(n == 0){\n            return 0;\n        }\n        if(n == 1){\n            return 1;\n        }\n\n        return fib(n-1) + fib(n-2);\n    }\n};",
+    "solved_date": "2026-06-18"
+  },
+  {
+    "platform": "LeetCode",
+    "id": "204",
+    "title": "Count Primes",
+    "url": "https://leetcode.com/problems/count-primes/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "math",
+      "enumeration",
+      "number-theory",
+      "primality-test",
+      "sieve-theory",
+      "prime-number-sieve"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int countPrimes(int n) {\n        if(n<2){\n            return 0;\n        }\n\n        vector<bool> isPrime(n , true);\n\n        isPrime[0] = false;\n        isPrime[1] = false;\n\n        for(int i = 2 ; i * i <= n ; ++i){\n            if(isPrime[i]){\n                for(int j = i*i ; j < n ; j += i){\n                    isPrime[j] = false;\n                }\n            }\n        }\n\n        int count = 0;\n        for(int i=2;i<n;++i){\n            if(isPrime[i]){\n                count++;\n            }\n        }\n        return count;\n    }\n};",
+    "solved_date": "2026-06-28",
+    "summary": "Algorithmic solution for 'Count Primes'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "217",
+    "title": "Contains Duplicate",
+    "url": "https://leetcode.com/problems/contains-duplicate/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table",
+      "sorting"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        unordered_map<int , int> um;\n\n        for(int x : nums){\n            um[x]++;\n        }\n\n        for(auto x : nums){\n            if(um[x] >= 2){\n                return true;\n            }\n        }\n        return false;\n    }\n};",
+    "solved_date": "2026-06-29",
+    "summary": "Algorithmic solution for 'Contains Duplicate'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "349",
+    "title": "Intersection of Two Arrays",
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table",
+      "two-pointers",
+      "binary-search",
+      "sorting"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {\n        unordered_set<int> us(nums1.begin() , nums1.end());\n        vector<int> ans;\n\n        for(int x : nums2){\n            if(us.find(x) != us.end()){\n                ans.push_back(x);\n                us.erase(x);\n            }\n        }\n\n        return ans;\n    }\n};",
+    "solved_date": "2026-06-29",
+    "summary": "Algorithmic solution for 'Intersection of Two Arrays'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "350",
+    "title": "Intersection of Two Arrays II",
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table",
+      "two-pointers",
+      "binary-search",
+      "sorting"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {\n        unordered_map<int , int> um;\n        vector<int> ans;\n\n        for(int x : nums1){\n            um[x]++;\n        }\n        \n        for(int x : nums2){\n            if(um[x] > 0){\n                ans.push_back(x);\n                um[x]--;\n            }\n        }\n\n        return ans;\n    }\n};",
+    "solved_date": "2026-06-29",
+    "summary": "Algorithmic solution for 'Intersection of Two Arrays II'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1207",
+    "title": "Unique Number of Occurrences",
+    "url": "https://leetcode.com/problems/unique-number-of-occurrences/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    bool uniqueOccurrences(vector<int>& arr) {\n        unordered_map<int , int> um;\n\n        for(int x : arr){\n            um[x]++;\n        }\n\n        unordered_set<int> us;\n\n        for(auto x : um){\n            if(us.find(x.second) != us.end()){\n                return false;\n            }\n\n            us.insert(x.second);\n        }\n        return true;\n    }\n};",
+    "solved_date": "2026-06-29",
+    "summary": "Algorithmic solution for 'Unique Number of Occurrences'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "169",
+    "title": "Majority Element",
+    "url": "https://leetcode.com/problems/majority-element/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table",
+      "divide-and-conquer",
+      "sorting",
+      "counting",
+      "boyer-moore-majority-vote-algorithm"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int majorityElement(vector<int>& nums) {\n        int n = nums.size();\n        unordered_map<int , int> um;\n\n        for(int x : nums){\n            um[x]++;\n        }\n\n        for(auto x : um){\n            if(x.second > (n/2)){\n                return x.first;\n            }\n        }\n        return -1;\n    }\n};",
+    "solved_date": "2026-06-29",
+    "summary": "Algorithmic solution for 'Majority Element'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "104",
+    "title": "Maximum Depth of Binary Tree",
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "difficulty": "easy",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        if(root == nullptr){\n            return 0;\n        }\n\n        int ld = maxDepth(root->left);\n        int rd = maxDepth(root->right);\n\n        int depth = max(ld , rd) + 1;\n\n        return depth;\n    }\n};",
+    "solved_date": "2026-08-20",
+    "summary": "Perform tree operation for 'Maximum Depth of Binary Tree' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "144",
+    "title": "Binary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+    "difficulty": "easy",
+    "tags": [
+      "stack",
+      "tree",
+      "depth-first-search",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\nvector<int> prerder(TreeNode* root , vector<int> v){\n        TreeNode* curr = root;\n        stack<TreeNode*> st;\n        while(curr != nullptr || st.size() > 0){\n            if(curr != nullptr){\n                v.push_back(curr->val);\n                st.push(curr);\n                curr = curr -> left;\n            }\n            else{\n                curr = st.top();\n                st.pop();\n                curr = curr -> right;\n            }\n        }\n        return v;\n    }\n    vector<int> preorderTraversal(TreeNode* root) {\n        vector<int> v , x;\n        x = prerder(root , v);\n\n        return x;\n    }\n};",
+    "solved_date": "2026-08-20",
+    "summary": "Perform tree operation for 'Binary Tree Preorder Traversal' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "94",
+    "title": "Binary Tree Inorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    "difficulty": "easy",
+    "tags": [
+      "stack",
+      "tree",
+      "depth-first-search",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> inorder(TreeNode* root , vector<int> v){\n        TreeNode* curr = root;\n        stack<TreeNode*> st;\n        while(curr != nullptr || st.size() > 0){\n            if(curr != nullptr){\n                st.push(curr);\n                curr = curr -> left;\n            }\n            else{\n                curr = st.top();\n                st.pop();\n                v.push_back(curr->val);\n                curr = curr -> right;\n            }\n        }\n        return v;\n    }\n    vector<int> inorderTraversal(TreeNode* root) {\n        vector<int> v , x;\n        x = inorder(root , v);\n\n        return x;\n    }\n};",
+    "solved_date": "2026-08-20",
+    "summary": "Perform tree operation for 'Binary Tree Inorder Traversal' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "102",
+    "title": "Binary Tree Level Order Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "breadth-first-search",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> levelOrder(TreeNode* root) {\n        queue<TreeNode*> q;\n        vector<vector<int>> v;\n        q.push(root);\n\n        if(root == nullptr){\n            return v;\n        }\n        while(q.size() > 0){\n            int size = q.size();\n            vector<int> v1;\n            for(int i = 1 ; i <= size ; ++i){\n                TreeNode* f = q.front();\n                q.pop();\n                v1.push_back(f->val);\n\n                if(f->left != nullptr){\n                    q.push(f->left);\n                }\n                if(f->right != nullptr){\n                    q.push(f->right);\n                }\n            }\n            v.push_back(v1);\n        }\n        return v;\n    }\n};",
+    "solved_date": "2026-08-22",
+    "summary": "Perform tree operation for 'Binary Tree Level Order Traversal' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "199",
+    "title": "Binary Tree Right Side View",
+    "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> rightSideView(TreeNode* root) {\n        queue<TreeNode*> q;\n        vector<int> v;\n        q.push(root);\n        \n        if(root == nullptr){\n            return v;\n        }\n\n        while(q.size() > 0){\n            int n = q.size();\n            for(int i = 1 ; i <= n ; ++i){\n                TreeNode* f = q.front();\n            q.pop();\n\n            if(i == n){\n                v.push_back(f->val);\n            }\n\n            if(f->left != nullptr){\n                q.push(f->left);\n            }\n            if(f->right != nullptr){\n                q.push(f->right);\n            }\n            }\n        }\n        return v;\n    }\n};",
+    "solved_date": "2026-08-22",
+    "summary": "Perform tree operation for 'Binary Tree Right Side View' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "987",
+    "title": "Vertical Order Traversal of a Binary Tree",
+    "url": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+    "difficulty": "hard",
+    "tags": [
+      "hash-table",
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "sorting",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> verticalTraversal(TreeNode* root) {\n        queue<pair<TreeNode* , int>> q;\n        unordered_map<int , vector<pair<int , int>>> um;\n        vector<vector<int>> v1;\n        int cmax = 0 , cmin = 0 , row = 0;\n        q.push({root , 0});\n\n        while(q.size() > 0){\n            int n = q.size();\n            for(int i = 1 ; i <= n ;++i){\n                pair<TreeNode* , int> p = q.front();\n            q.pop();\n\n            TreeNode* t = p.first;\n            int c = p.second;\n\n            cmin = min(c,cmin);\n            cmax = max(c,cmax);\n\n            if(um.find(c) == um.end()){\n                vector<pair<int , int>> v;\n                um.insert({c , v});\n            }\n            um[c].push_back({row , t->val});\n\n            if(t->left != nullptr){\n                q.push({t->left , c-1});\n            }\n            if(t->right != nullptr){\n                q.push({t->right , c+1});\n            }\n        }\n        row++;\n        }\n\n        for(int i = cmin ; i <= cmax ; ++i){\n            sort(um[i].begin() , um[i].end());\n            int n = um[i].size();\n            vector<int> temp;\n\n            for(int j = 0 ; j < n ; j++){\n                temp.push_back(um[i][j].second);\n            }\n            v1.push_back(temp);\n        }\n\n        return v1;\n    }\n};",
+    "solved_date": "2026-08-22",
+    "summary": "Perform tree operation for 'Vertical Order Traversal of a Binary Tree' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "2236",
+    "title": "Root Equals Sum of Children",
+    "url": "https://leetcode.com/problems/root-equals-sum-of-children/",
+    "difficulty": "easy",
+    "tags": [
+      "tree",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool checkTree(TreeNode* root) {\n        int l = root->left->val;\n        int r = root->right->val;\n\n        return l+r == root->val;\n    }\n};",
+    "solved_date": "2026-08-24",
+    "summary": "Algorithmic solution for 'Root Equals Sum of Children'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "701",
+    "title": "Insert into a Binary Search Tree",
+    "url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* insertIntoBST(struct TreeNode* root, int val) {\n    struct TreeNode* curr = root;\n    struct TreeNode* p = NULL;\n\n    struct TreeNode* n = malloc(sizeof(struct TreeNode));\n    n->val = val;\n    n->left = NULL;\n    n->right = NULL;\n\n    if(root == NULL){\n        return n;\n    }\n\n    while(curr != NULL){\n        p = curr;\n\n        if(curr->val > val){\n            curr = curr->left;\n        }\n        else{\n            curr = curr->right;\n        }\n    }\n\n    if(p->val > val){\n        p->left = n;\n    }\n    else{\n        p->right = n;\n    }\n\n    return root;\n}",
+    "solved_date": "2026-10-25",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "669",
+    "title": "Trim a Binary Search Tree",
+    "url": "https://leetcode.com/problems/trim-a-binary-search-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* trimBST(struct TreeNode* root, int low, int high) {\n    if(root == NULL){\n        return NULL;\n    }\n\n    root->left = trimBST(root->left , low , high);\n    root->right = trimBST(root->right , low , high);\n\n    if(root->val >= low && root->val <= high){\n        return root;\n    }\n    else{\n        if(root->val < low){\n            return root->right;\n        }\n        else{\n            return root->left;\n        }\n    }\n}",
+    "solved_date": "2026-10-25",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "235",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree",
+      "binary-lifting",
+      "lowest-common-ancestor"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n\nstruct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {\n    struct TreeNode* curr = root;\n\n    if(root == NULL){\n        return NULL;\n    }\n\n    while(curr != NULL){\n        if(curr->val > p->val && curr->val > q->val){\n        curr = curr->left;\n    }\n    else if(curr->val < p->val && curr->val < q->val){\n        curr = curr->right;\n    }\n    else{\n        return curr;\n    }\n    }\n\n    return NULL;\n}",
+    "solved_date": "2026-10-25",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "236",
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-tree",
+      "binary-lifting",
+      "lowest-common-ancestor"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {\n    if(root == NULL){\n        return NULL;\n    }\n    if(root->val == p->val || root->val == q->val){\n        return root;\n    }\n\n    struct TreeNode* l = lowestCommonAncestor(root->left , p , q);\n    struct TreeNode* r = lowestCommonAncestor(root->right , p , q);\n\n    if(l == NULL && r == NULL){\n        return NULL;\n    }\n    else if(l == NULL){\n        return r;\n    }\n    else if(r == NULL){\n        return l;\n    }\n    else{\n        return root;\n    }\n}",
+    "solved_date": "2026-10-25",
+    "summary": "Perform tree operation for 'Lowest Common Ancestor of a Binary Tree' on a binary tree structure.",
+    "approach": "Traverse the tree recursively or iteratively using a stack/queue to process nodes.",
+    "time": "O(n) visiting every node in the binary tree exactly once.",
+    "space": "O(h) auxiliary stack space where h is the tree height.",
+    "edge_cases": "Empty tree (root == nullptr), single node tree, skewed tree."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "98",
+    "title": "Validate Binary Search Tree",
+    "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C",
+    "ext": "c",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n\n struct TreeNode* p = NULL;\n bool isBST = true;\n\n void inOrder(struct TreeNode* root);\n\nbool isValidBST(struct TreeNode* root) {\n    p = NULL;\n    isBST = true;\n\n    inOrder(root);\n    return isBST;\n}\n\nvoid inOrder(struct TreeNode* root){\n    struct TreeNode* curr = root;\n\n    if(root == NULL || !isBST){\n        return;\n    }\n\n    inOrder(curr->left);\n    if(p!=NULL && p->val >= curr->val){\n        isBST = false;\n        return;\n    }\n    p = curr;\n    inOrder(curr->right);\n\n}",
+    "solved_date": "2026-10-25",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "99",
+    "title": "Recover Binary Search Tree",
+    "url": "https://leetcode.com/problems/recover-binary-search-tree/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    \n    void inOrder(TreeNode* root , vector<TreeNode*> &v){\n        TreeNode* curr = root;\n\n        if(root == nullptr){\n            return;\n        }\n\n        inOrder(curr->left , v);\n        v.push_back(curr);\n        inOrder(curr->right , v);\n    }\n\n    void recoverTree(TreeNode* root) {\n        vector<TreeNode*> v;\n        TreeNode* f = nullptr;\n        TreeNode* s = nullptr;\n        int count = 0;\n\n        inOrder(root , v);\n\n        for(int i = 0 ; i < v.size() - 1 ; ++i){\n            if(v[i]->val > v[i+1]->val){\n                count++;\n\n                if(count == 1){\n                    f = v[i];\n                    s = v[i+1];\n                }\n                if(count == 2){\n                    s = v[i+1];\n                }\n            }\n        }\n\n        if(f != nullptr && s != nullptr){\n            swap(f->val , s->val);\n        }\n    }\n};",
+    "solved_date": "2026-10-26",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "20",
+    "title": "Valid Parentheses",
+    "url": "https://leetcode.com/problems/valid-parentheses/",
+    "difficulty": "easy",
+    "tags": [
+      "string",
+      "stack",
+      "bracket-sequences"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    bool isValid(string s) {\n        stack<char> st;\n\n        int size = s.size();\n\n        for(int i = 0 ; i < size ; ++i){\n            if(s[i] == '(' || s[i] == '[' || s[i] == '{'){\n                st.push(s[i]);\n            }\n            else{\n                if(st.size() == 0){\n                    return false;\n                }\n                else{\n                    if((s[i] == ')' && st.top() == '(') || (s[i] == ']' && st.top() == '[') || (s[i] == '}' && st.top() == '{')){\n                        st.pop();\n                    }\n                    else{\n                        return false;\n                    }\n                }\n            }\n        }\n\n        if(st.size() == 0){\n            return true;\n        }\n        else{\n            return false;\n        }\n    }\n};",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Valid Parentheses' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1047",
+    "title": "Remove All Adjacent Duplicates In String",
+    "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/",
+    "difficulty": "easy",
+    "tags": [
+      "string",
+      "stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    string removeDuplicates(string s) {\n        stack<char> st;\n\n        st.push(s[0]);\n        for(int i = 1 ; i < s.size() ; ++i){\n            if(st.size() > 0 && s[i] == st.top()){\n                st.pop();\n            }\n            else{\n                st.push(s[i]);\n            }\n        } \n\n        string ns = \"\";\n        while(st.size() > 0){\n            ns = ns + st.top();\n            st.pop();\n        }\n\n        reverse(ns.begin() , ns.end());\n\n        return ns;\n    }\n};",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Remove All Adjacent Duplicates In String' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1209",
+    "title": "Remove All Adjacent Duplicates in String II",
+    "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/",
+    "difficulty": "medium",
+    "tags": [
+      "string",
+      "stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    string removeDuplicates(string s, int k) {\n        stack<pair<char , int>> st;\n\n        for(int i = 0 ; i < s.size() ; ++i){\n            if(st.size() == 0 || st.top().first != s[i]){\n                st.push({s[i] , 1});\n            }\n            else{\n                st.top().second++;\n\n                if(st.top().second == k){\n                    st.pop();\n                }\n            }\n        }\n\n        string ans = \"\";\n        while(st.size() > 0){\n            char ch = st.top().first;\n            int freq = st.top().second;\n\n            ans.append(freq , ch);\n\n            st.pop();\n        }\n\n        reverse(ans.begin() , ans.end());\n\n        return ans;\n    }\n};",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Remove All Adjacent Duplicates in String II' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "155",
+    "title": "Min Stack",
+    "url": "https://leetcode.com/problems/min-stack/",
+    "difficulty": "medium",
+    "tags": [
+      "stack",
+      "design"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class MinStack {\npublic:\n    stack<int> st;\n    stack<int> minSt;\n\n    MinStack() {\n    \n    }\n    \n    void push(int value) {\n        st.push(value);\n\n        if(minSt.size() > 0 && st.top() >= minSt.top()){\n            minSt.push(minSt.top());\n        }\n        else{\n            minSt.push(value);\n        }\n    }\n    \n    void pop() {\n        st.pop();\n        minSt.pop();\n    }\n    \n    int top() {\n        return st.top();\n    }\n    \n    int getMin() {\n        return minSt.top();\n    }\n};\n\n/**\n * Your MinStack object will be instantiated and called as such:\n * MinStack* obj = new MinStack();\n * obj->push(value);\n * obj->pop();\n * int param_3 = obj->top();\n * int param_4 = obj->getMin();\n */",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Min Stack' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "150",
+    "title": "Evaluate Reverse Polish Notation",
+    "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "math",
+      "stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int evalRPN(vector<string>& tokens) {\n        int n = tokens.size();\n        stack<int> st;\n\n        for(int i = 0 ; i < n ; ++i){\n            if(tokens[i] != \"+\" && tokens[i] != \"-\" && tokens[i] != \"*\" && tokens[i] != \"/\"){\n                st.push(stoi(tokens[i]));\n            }\n            else{\n                int op1 = st.top();\n                st.pop();\n\n                int op2 = st.top();\n                st.pop();\n\n                int ans;\n\n                if(tokens[i] == \"+\"){\n                    ans = op2 + op1;\n                }\n                else if(tokens[i] == \"-\"){\n                    ans = op2 - op1;\n                }\n                else if(tokens[i] == \"*\"){\n                    ans = op2 * op1;\n                }\n                else if(tokens[i] == \"/\"){\n                    ans = op2 / op1;\n                }\n\n                st.push(ans);\n            }\n        }\n\n        return st.top();\n    }\n};",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Evaluate Reverse Polish Notation' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "84",
+    "title": "Largest Rectangle in Histogram",
+    "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "difficulty": "hard",
+    "tags": [
+      "array",
+      "stack",
+      "monotonic-stack",
+      "range-minimum-maximum-query"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int largestRectangleArea(vector<int>& heights) {\n        int n = heights.size();\n        vector<int> ls(n , -1);\n        stack<int> st1;\n\n        for(int i = 0 ; i < n ; ++i){\n            while(st1.size() > 0 && heights[st1.top()] >= heights[i]){\n                st1.pop();\n            }\n\n            if(st1.size() > 0){\n                ls[i] = st1.top();\n            }\n\n            st1.push(i);\n        }\n\n        vector<int> rs(n , n);\n        stack<int> st2;\n\n        for(int i = n-1 ; i >= 0 ; --i){\n            while(st2.size() > 0 && heights[st2.top()] >= heights[i]){\n                st2.pop();\n            }\n\n            if(st2.size() > 0){\n                rs[i] = st2.top();\n            }\n\n            st2.push(i);\n        }\n\n        int area;\n        for(int i = 0 ; i < n ; ++i){\n            area = max(area , (rs[i] - ls[i] - 1)*heights[i]);\n        }\n\n        return area;\n    }\n};",
+    "solved_date": "2026-11-01",
+    "summary": "Solve 'Largest Rectangle in Histogram' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "876",
+    "title": "Middle of the Linked List",
+    "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+    "difficulty": "easy",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* middleNode(ListNode* head) {\n        ListNode* s = head;\n        ListNode* f = head;\n\n        while(f != nullptr){\n            if(f->next == nullptr){\n                return s;\n            }\n\n            if(f->next->next == nullptr){\n                return s->next;\n            }\n\n            s = s->next;\n            f = f->next->next;\n        }\n\n        return nullptr;\n    }\n};",
+    "solved_date": "2026-11-04",
+    "summary": "Algorithmic solution for 'Middle of the Linked List'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "206",
+    "title": "Reverse Linked List",
+    "url": "https://leetcode.com/problems/reverse-linked-list/",
+    "difficulty": "easy",
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        ListNode* t = head;\n        ListNode* rh = nullptr;\n\n        if(head == nullptr){\n            return nullptr;\n        }\n\n        while(head != nullptr){\n            head = head->next;\n            t->next = rh;\n            rh = t;\n            t = head;\n        }\n\n        return rh;\n    }\n};",
+    "solved_date": "2026-11-04",
+    "summary": "Reverse a singly linked list and return the new head pointer.",
+    "approach": "Iterate through the list using three pointers (prev, curr, next) to reverse link directions in place.",
+    "time": "O(n) linear scan through the nodes.",
+    "space": "O(1) auxiliary space modifying pointers in place.",
+    "edge_cases": "Empty list (head == nullptr), single-node list."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "234",
+    "title": "Palindrome Linked List",
+    "url": "https://leetcode.com/problems/palindrome-linked-list/",
+    "difficulty": "easy",
+    "tags": [
+      "linked-list",
+      "two-pointers",
+      "stack",
+      "recursion"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    bool isPalindrome(ListNode* head) {\n        ListNode* s = head;\n        ListNode* f = head;\n        ListNode* mid;\n\n        if(head == nullptr || head->next == nullptr){\n            return true;\n        }\n\n        while(f != nullptr){\n            if(f->next == nullptr || f->next->next == nullptr){\n                mid = s;\n                break;\n            }\n\n            s = s->next;\n            f = f->next->next;\n        }\n\n        ListNode* s1 = head;\n        ListNode* s2 = mid->next;\n\n        mid->next = nullptr;\n\n        ListNode* rh = nullptr;\n        ListNode* t = s2;\n\n        while(s2 != nullptr){\n            s2 = s2->next;\n            t->next = rh;\n            rh = t;\n            t = s2;\n        }\n\n        s2 = rh;\n\n        while(s2 != nullptr){\n            if(s1->val != s2->val){\n                return false;\n            }\n\n            s1 = s1->next;\n            s2 = s2->next;\n        }\n\n        return true;\n    }\n};",
+    "solved_date": "2026-11-05",
+    "summary": "Solve 'Palindrome Linked List' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "203",
+    "title": "Remove Linked List Elements",
+    "url": "https://leetcode.com/problems/remove-linked-list-elements/",
+    "difficulty": "easy",
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* removeElements(ListNode* head, int val) {\n        ListNode* curr = head;\n        ListNode* prev = nullptr;\n\n        if(head == nullptr){\n            return nullptr;\n        }\n\n        while(curr != nullptr){\n            if(curr->val == val){\n                if(prev == nullptr){\n                    head = curr->next;\n                    curr = head;\n                }\n                else{\n                    prev->next = curr->next;\n                    curr = prev->next;\n                }\n            }\n            else{\n                prev = curr;\n                curr = curr->next;\n            }\n        }\n\n        return head;\n    }\n};",
+    "solved_date": "2026-11-05",
+    "summary": "Algorithmic solution for 'Remove Linked List Elements'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "83",
+    "title": "Remove Duplicates from Sorted List",
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
+    "difficulty": "easy",
+    "tags": [
+      "linked-list"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* deleteDuplicates(ListNode* head) {\n        ListNode* t = head;\n\n        if(head == nullptr){\n            return nullptr;\n        }\n\n        while(t != nullptr){\n            if(t->next != nullptr && t->val == t->next->val){\n                t->next = t->next->next;\n            }\n            else if(t->next == nullptr){\n                break;\n            }\n\n            if(t->next != nullptr && t->val != t->next->val){\n                t = t->next;\n            }\n            else if(t->next == nullptr){\n                t = t->next;\n            }\n        }\n\n        return head;\n    }\n};",
+    "solved_date": "2026-11-05",
+    "summary": "Algorithmic solution for 'Remove Duplicates from Sorted List'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1700",
+    "title": "Number of Students Unable to Eat Lunch",
+    "url": "https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "stack",
+      "queue",
+      "simulation"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int countStudents(vector<int>& students, vector<int>& sandwiches) {\n        stack<int> st;\n        queue<int> q;\n\n        int n = students.size();\n        int count = 0;\n\n        for(int i = 0 ; i < n ; ++i){\n            q.push(students[i]);\n        }\n\n        for(int i = n-1 ; i >= 0 ; --i){\n            st.push(sandwiches[i]);\n        }\n\n        while(q.size() > 0 && count < q.size()){\n            if(st.top() == q.front()){\n                q.pop();\n                st.pop();\n                count = 0;\n            }\n            else{\n                q.push(q.front());\n                q.pop();\n                count++;\n            }\n        }\n\n        return q.size();\n    }\n};",
+    "solved_date": "2026-11-06",
+    "summary": "Solve 'Number of Students Unable to Eat Lunch' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "239",
+    "title": "Sliding Window Maximum",
+    "url": "https://leetcode.com/problems/sliding-window-maximum/",
+    "difficulty": "hard",
+    "tags": [
+      "array",
+      "queue",
+      "sliding-window",
+      "heap-priority-queue",
+      "monotonic-queue",
+      "range-minimum-maximum-query"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> maxSlidingWindow(vector<int>& nums, int k) {\n        deque<int> dq;\n        vector<int> v;\n\n        for(int i = 0 ; i < k ; ++i){\n            while(dq.size() > 0 && dq.back() < nums[i]){\n                dq.pop_back();\n            }\n\n            dq.push_back(nums[i]);\n        }\n\n        if(dq.size() > 0){\n            v.push_back(dq.front());\n        }\n\n        int s = 1 , e = k;\n\n        while(e < nums.size()){\n            if(nums[s-1] == dq.front()){\n                dq.pop_front();\n            }\n\n            while(dq.size() > 0 && dq.back() < nums[e]){\n                dq.pop_back();\n            }\n\n            dq.push_back(nums[e]);\n\n            if(dq.size() > 0){\n                v.push_back(dq.front());\n            }\n\n            s++;\n            e++;\n        }\n\n        return v;\n    }\n};",
+    "solved_date": "2026-11-06",
+    "summary": "Algorithmic solution for 'Sliding Window Maximum'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "895",
+    "title": "Maximum Frequency Stack",
+    "url": "https://leetcode.com/problems/maximum-frequency-stack/",
+    "difficulty": "hard",
+    "tags": [
+      "hash-table",
+      "stack",
+      "design",
+      "ordered-set"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class FreqStack {\npublic:\n    unordered_map<int , stack<int>> fs;\n    unordered_map<int , int> um;\n\n    FreqStack() {\n        \n    }\n    \n    void push(int val) {\n        um[val]++;\n        int f = um[val];\n\n        if(fs.find(f) == fs.end()){\n            stack<int> s;\n            fs[f] = s;\n        }\n\n        fs[f].push(val);\n    }\n    \n    int pop() {\n        int f = fs.size();\n        int elem = fs[f].top();\n        fs[f].pop();\n\n        if(fs[f].size() == 0){\n            fs.erase(f);\n        }\n\n        um[elem]--;\n        return elem;\n    }\n};\n\n/**\n * Your FreqStack object will be instantiated and called as such:\n * FreqStack* obj = new FreqStack();\n * obj->push(val);\n * int param_2 = obj->pop();\n */",
+    "solved_date": "2026-11-06",
+    "summary": "Solve 'Maximum Frequency Stack' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "85",
+    "title": "Maximal Rectangle",
+    "url": "https://leetcode.com/problems/maximal-rectangle/",
+    "difficulty": "hard",
+    "tags": [
+      "array",
+      "dynamic-programming",
+      "stack",
+      "matrix",
+      "monotonic-stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int rectangularArea(vector<int> &v){\n        int n = v.size();\n\n        vector<int> ls(n , -1);\n        stack<int> s1;\n\n        for(int i = 0 ; i < v.size() ; ++i){\n            while(s1.size() > 0 && v[s1.top()] >= v[i]){\n                s1.pop();\n            }\n\n            if(s1.size() > 0){\n                ls[i] = s1.top();\n            }\n\n            s1.push(i);\n        }\n\n        vector<int> rs(n , n);\n        stack<int> s2;\n\n        for(int i = n-1 ; i >= 0 ; --i){\n            while(s2.size() > 0 && v[s2.top()] >= v[i]){\n                s2.pop();\n            }\n\n            if(s2.size() > 0){\n                rs[i] = s2.top();\n            }\n\n            s2.push(i);\n        }\n\n        int area = 0;\n        for(int i = 0 ; i < n ; ++i){\n            area = max(area , (rs[i]-ls[i]-1)*v[i]);\n        }\n\n        return area;\n    }\n\n    int maximalRectangle(vector<vector<char>>& matrix) {\n        int n = matrix.size();\n        int m = matrix[0].size();\n\n        vector<int> heights(m , 0);\n        int area = 0;\n\n        for(int i = 0 ; i < n ; ++i){\n            for(int j = 0 ; j < m ; ++j){\n                if(matrix[i][j] == '1'){\n                    heights[j]++;\n                }\n                else{\n                    heights[j] = 0;\n                }\n            }\n\n            area = max(area , rectangularArea(heights));\n        }\n\n        return area;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Maximal Rectangle' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "221",
+    "title": "Maximal Square",
+    "url": "https://leetcode.com/problems/maximal-square/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "dynamic-programming",
+      "matrix"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int squareArea(vector<int> v){\n        int n = v.size();\n\n        vector<int> ls(n , -1);\n        stack<int> s1;\n\n        for(int i = 0 ; i < n ; ++i){\n            while(s1.size() > 0 && v[s1.top()] >= v[i]){\n                s1.pop();\n            }\n\n            if(s1.size() > 0){\n                ls[i] = s1.top();\n            }\n\n            s1.push(i);\n        }\n\n        vector<int> rs(n , n);\n        stack<int> s2;\n\n        for(int i = n-1 ; i >= 0 ; --i){\n            while(s2.size() > 0 && v[s2.top()] >= v[i]){\n                s2.pop();\n            }\n\n            if(s2.size() > 0){\n                rs[i] = s2.top();\n            }\n\n            s2.push(i);\n        }\n\n        int area = 0;\n        int d;\n        for(int i = 0 ; i < n ; ++i){\n            int width = rs[i]-ls[i]-1;\n            int height = v[i];\n\n            int side = min(height , width);\n\n            area = max(area , side*side);\n        }\n\n        return area;\n    } \n\n    int maximalSquare(vector<vector<char>>& matrix) {\n        int n = matrix.size();\n        int m = matrix[0].size();\n\n        int area = 0;\n        vector<int> heights(m , 0);\n\n        for(int i = 0 ; i < n ; ++i){\n            for(int j = 0 ; j < m ; ++j){\n                if(matrix[i][j] == '1'){\n                    heights[j]++;\n                }\n                else{\n                    heights[j] = 0;\n                }\n            }\n\n            area = max(area , squareArea(heights));\n        }\n\n        return area;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Maximal Square' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1019",
+    "title": "Next Greater Node In Linked List",
+    "url": "https://leetcode.com/problems/next-greater-node-in-linked-list/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "linked-list",
+      "stack",
+      "monotonic-stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head){\n        ListNode* rh = nullptr;\n        ListNode* t = head;\n\n        while(head != nullptr){\n            head = head->next;\n            t->next = rh;\n            rh = t;\n            t = head;\n        }\n\n        return rh;\n    }\n\n    vector<int> nextLargerNodes(ListNode* head) {\n        vector<int> v;\n        stack<int> st;\n\n        head = reverseList(head);\n        ListNode* t = head;\n\n        while(t != nullptr){\n            while(st.size() > 0 && st.top() <= t->val){\n                st.pop();\n            }\n\n            if(st.size() > 0){\n                v.push_back(st.top());\n            }\n            else{\n                v.push_back(0);\n            }\n\n            st.push(t->val);\n\n            t = t->next;\n        }\n\n        reverse(v.begin() , v.end());\n\n        return v;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Next Greater Node In Linked List' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "739",
+    "title": "Daily Temperatures",
+    "url": "https://leetcode.com/problems/daily-temperatures/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "stack",
+      "monotonic-stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> dailyTemperatures(vector<int>& temperatures) {\n        int n = temperatures.size();\n        vector<int> v(n , 0);\n        stack<int> st;\n\n        for(int i = n-1 ; i >= 0 ; --i){\n            while(st.size() > 0 && temperatures[st.top()] <= temperatures[i]){\n                st.pop();\n            }\n\n            if(st.size() > 0){\n                v[i] = abs(i - st.top());\n            }\n\n            st.push(i);\n        }\n\n        return v;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Daily Temperatures' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "1544",
+    "title": "Make The String Great",
+    "url": "https://leetcode.com/problems/make-the-string-great/",
+    "difficulty": "easy",
+    "tags": [
+      "string",
+      "stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    bool isLowerCase(char ch){\n        return ch >= 'a' && ch <= 'z';\n    }\n\n    bool isUpperCase(char ch){\n        return ch >= 'A' && ch <= 'Z';\n    }\n\n    string makeGood(string s) {\n        stack<char> st;\n\n        for(int i = 0 ; i < s.size() ; ++i){\n            if(st.size() != 0 && tolower(st.top()) == tolower(s[i]) && ((isLowerCase(s[i]) && isUpperCase(st.top())) || (isLowerCase(st.top()) && isUpperCase(s[i])))){\n                st.pop();\n            }\n            else{\n                st.push(s[i]);\n            }\n        }\n\n        string ans = \"\";\n        while(st.size() > 0){\n            char ch = st.top();\n            ans += ch;\n\n            st.pop();\n        }\n\n        reverse(ans.begin() , ans.end());\n\n        return ans;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Make The String Great' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "2390",
+    "title": "Removing Stars From a String",
+    "url": "https://leetcode.com/problems/removing-stars-from-a-string/",
+    "difficulty": "medium",
+    "tags": [
+      "string",
+      "stack",
+      "simulation"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    string removeStars(string s) {\n        stack<int> st;\n        string ans = \"\";\n\n        for(int i = 0 ; i < s.size() ; ++i){\n            if(s[i] == '*' && st.size() > 0){\n                st.pop();\n            }\n\n            if(s[i] != '*'){\n                st.push(s[i]);\n            }\n        }\n\n        while(st.size() > 0){\n            char ch = st.top();\n            ans += ch;\n            st.pop();\n        }\n\n        reverse(ans.begin() , ans.end());\n\n        return ans;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Solve 'Removing Stars From a String' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "700",
+    "title": "Search in a Binary Search Tree",
+    "url": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
+    "difficulty": "easy",
+    "tags": [
+      "tree",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* searchBST(TreeNode* root, int val) {\n        TreeNode* t = root;\n\n        if(root == nullptr){\n            return nullptr;\n        }\n\n        while(t != nullptr){\n            if(t->val == val){\n                return t;\n            }\n            else if(t->val > val){\n                t = t->left;\n            }\n            else{\n                t = t->right;\n            }\n        }\n\n        return nullptr;\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Find the index of a target value within a sorted array.",
+    "approach": "Maintain low and high pointers, calculate mid, and halve the search interval based on comparison with the target.",
+    "time": "O(log n) logarithmic time search.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Target not present, array of length 1, target at boundary (first or last element)."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "230",
+    "title": "Kth Smallest Element in a BST",
+    "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "difficulty": "medium",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    void inOrder(TreeNode* root , vector<int> &v){\n        if(root == nullptr){\n            return;\n        }\n\n        inOrder(root->left , v);\n        v.push_back(root->val);\n        inOrder(root->right , v);\n    }\n\n    int kthSmallest(TreeNode* root, int k) {\n        vector<int> v;\n\n        inOrder(root , v);\n\n        return v[k-1];\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Algorithmic solution for 'Kth Smallest Element in a BST'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "938",
+    "title": "Range Sum of BST",
+    "url": "https://leetcode.com/problems/range-sum-of-bst/",
+    "difficulty": "easy",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int rangeSumBST(TreeNode* root, int low, int high) {\n        if(root == nullptr){\n            return 0;\n        }\n\n        if(root->val < low){\n            return rangeSumBST(root->right , low , high);\n        }\n\n        if(root->val > high){\n            return rangeSumBST(root->left , low , high);\n        }\n        \n        return root->val +\n                rangeSumBST(root->left , low , high) +\n                rangeSumBST(root->right , low , high);\n    }\n};",
+    "solved_date": "2026-11-07",
+    "summary": "Algorithmic solution for 'Range Sum of BST'.",
+    "approach": "Iterate through the input data, applying problem-specific condition checks and state updates.",
+    "time": "O(n) linear scan through the input.",
+    "space": "O(1) constant auxiliary space.",
+    "edge_cases": "Boundary values (minimum/maximum input limits), empty or single-element inputs."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "496",
+    "title": "Next Greater Element I",
+    "url": "https://leetcode.com/problems/next-greater-element-i/",
+    "difficulty": "easy",
+    "tags": [
+      "array",
+      "hash-table",
+      "stack",
+      "monotonic-stack"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {\n        int n1 = nums1.size();\n        int n2 = nums2.size();\n\n        vector<int> v(n1 , -1);\n        unordered_map<int , int> um;\n        stack<int> st;\n\n        for(int i = n2-1 ; i >= 0 ; --i){\n            while(st.size() > 0 && st.top() <= nums2[i]){\n                st.pop();\n            }\n\n            if(st.size() > 0){\n                um[nums2[i]] = st.top();\n            }\n\n            st.push(nums2[i]);\n        }\n\n        for(int i = 0 ; i < n1 ; ++i){\n            if(um.find(nums1[i]) != um.end()){\n                v[i] = um[nums1[i]];\n            }\n        }\n\n        return v;\n    }\n};",
+    "solved_date": "2026-11-08",
+    "summary": "Solve 'Next Greater Element I' using a stack data structure.",
+    "approach": "Maintain a stack to track elements in Last-In-First-Out order, matching pairs or maintaining a monotonic sequence.",
+    "time": "O(n) each element is pushed and popped at most once.",
+    "space": "O(n) stack auxiliary space.",
+    "edge_cases": "Empty input, mismatched elements, strictly increasing or decreasing sequences."
+  },
+  {
+    "platform": "LeetCode",
+    "id": "215",
+    "title": "Kth Largest Element in an Array",
+    "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "difficulty": "medium",
+    "tags": [
+      "array",
+      "divide-and-conquer",
+      "sorting",
+      "heap-priority-queue",
+      "quickselect"
+    ],
+    "language": "C++",
+    "ext": "cpp",
+    "code": "class Solution {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        priority_queue<int , vector<int> , greater<int>> pq(nums.begin() , nums.end());\n        int n = pq.size();\n        \n        for(int i = 1 ; i <= n-k ; ++i){\n            pq.pop();\n        }\n\n        return pq.top();\n    }\n};",
+    "solved_date": "2026-11-09",
+    "summary": "Find the k-th largest element in an unsorted integer array.",
+    "approach": "Use a min-heap (or priority queue) of size k, or push all elements to a min-heap and pop until the k-th largest remains.",
+    "time": "O(n log n) or O(n log k) using priority queue operations.",
+    "space": "O(n) or O(k) for heap storage.",
+    "edge_cases": "Duplicate values, negative integers, k = 1 (maximum element), k = n (minimum element)."
+  }
+]

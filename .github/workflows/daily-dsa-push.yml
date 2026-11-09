@@ -1,0 +1,43 @@
+name: Daily DSA push
+
+on:
+  schedule:
+    - cron: "30 4 * * *"   # 04:30 UTC = 10:00 AM IST. Change as you like.
+  workflow_dispatch:        # the manual "next" button (Actions tab -> Run workflow)
+    inputs:
+      force:
+        description: "Push another batch even if 2 were already pushed today"
+        type: boolean
+        default: false
+
+concurrency:
+  group: dsa-daily-push
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git author
+        run: |
+          # Use YOUR GitHub noreply email so commits count on your contribution graph.
+          git config user.name  "Shivanshu Shukla"
+          git config user.email "shivanshushukla2602@gmail.com"
+
+      - name: Create today's commits
+        env:
+          PER_RUN: "2"
+          FORCE: ${{ github.event.inputs.force }}
+        run: python scripts/daily_push.py
+
+      - name: Push
+        run: git push
