@@ -10,4 +10,5 @@
 | 2026-11-11 | Codeforces | [2167A. Square?](Codeforces/Easy/2167A-square) | Easy |
 | 2026-11-11 | LeetCode | [172. Factorial Trailing Zeroes](LeetCode/Medium/172-factorial-trailing-zeroes) | Medium |
 | 2026-11-12 | Codeforces | [231A. Team](Codeforces/Easy/231A-team) | Easy |
+| 2026-11-12 | LeetCode | [58. Length of Last Word](LeetCode/Easy/58-length-of-last-word) | Easy |
 <!-- DSA-INDEX-END -->
