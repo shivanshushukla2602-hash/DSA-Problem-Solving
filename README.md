@@ -12,4 +12,5 @@
 | 2026-11-12 | Codeforces | [231A. Team](Codeforces/Easy/231A-team) | Easy |
 | 2026-11-12 | LeetCode | [58. Length of Last Word](LeetCode/Easy/58-length-of-last-word) | Easy |
 | 2026-11-13 | Codeforces | [282A. Bit++](Codeforces/Easy/282A-bit) | Easy |
+| 2026-11-13 | LeetCode | [704. Binary Search](LeetCode/Easy/704-binary-search) | Easy |
 <!-- DSA-INDEX-END -->
