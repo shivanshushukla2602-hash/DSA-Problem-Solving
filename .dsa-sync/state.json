@@ -44,6 +44,11 @@
       "key": "codeforces:158A",
       "title": "Next Round",
       "date": "2026-11-14"
+    },
+    {
+      "key": "leetcode:35",
+      "title": "Search Insert Position",
+      "date": "2026-11-14"
     }
   ]
 }
