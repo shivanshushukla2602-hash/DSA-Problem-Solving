@@ -54,6 +54,11 @@
       "key": "codeforces:112A",
       "title": "Petya and Strings",
       "date": "2026-11-15"
+    },
+    {
+      "key": "leetcode:34",
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "date": "2026-11-15"
     }
   ]
 }
