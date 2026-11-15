@@ -15,4 +15,5 @@
 | 2026-11-13 | LeetCode | [704. Binary Search](LeetCode/Easy/704-binary-search) | Easy |
 | 2026-11-14 | Codeforces | [158A. Next Round](Codeforces/Easy/158A-next-round) | Easy |
 | 2026-11-14 | LeetCode | [35. Search Insert Position](LeetCode/Easy/35-search-insert-position) | Easy |
+| 2026-11-15 | Codeforces | [112A. Petya and Strings](Codeforces/Easy/112A-petya-and-strings) | Easy |
 <!-- DSA-INDEX-END -->
