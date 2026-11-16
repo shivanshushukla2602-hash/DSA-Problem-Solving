@@ -18,4 +18,5 @@
 | 2026-11-15 | Codeforces | [112A. Petya and Strings](Codeforces/Easy/112A-petya-and-strings) | Easy |
 | 2026-11-15 | LeetCode | [34. Find First and Last Position of Element in Sorted Array](LeetCode/Medium/34-find-first-and-last-position-of-element-in-sorted-array) | Medium |
 | 2026-11-16 | Codeforces | [236A. Boy or Girl](Codeforces/Easy/236A-boy-or-girl) | Easy |
+| 2026-11-16 | LeetCode | [162. Find Peak Element](LeetCode/Medium/162-find-peak-element) | Medium |
 <!-- DSA-INDEX-END -->

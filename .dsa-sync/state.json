@@ -64,6 +64,11 @@
       "key": "codeforces:236A",
       "title": "Boy or Girl",
       "date": "2026-11-16"
+    },
+    {
+      "key": "leetcode:162",
+      "title": "Find Peak Element",
+      "date": "2026-11-16"
     }
   ]
 }
