@@ -74,6 +74,11 @@
       "key": "codeforces:281A",
       "title": "Word Capitalization",
       "date": "2026-11-17"
+    },
+    {
+      "key": "leetcode:540",
+      "title": "Single Element in a Sorted Array",
+      "date": "2026-11-17"
     }
   ]
 }

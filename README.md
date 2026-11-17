@@ -20,4 +20,5 @@
 | 2026-11-16 | Codeforces | [236A. Boy or Girl](Codeforces/Easy/236A-boy-or-girl) | Easy |
 | 2026-11-16 | LeetCode | [162. Find Peak Element](LeetCode/Medium/162-find-peak-element) | Medium |
 | 2026-11-17 | Codeforces | [281A. Word Capitalization](Codeforces/Easy/281A-word-capitalization) | Easy |
+| 2026-11-17 | LeetCode | [540. Single Element in a Sorted Array](LeetCode/Medium/540-single-element-in-a-sorted-array) | Medium |
 <!-- DSA-INDEX-END -->
