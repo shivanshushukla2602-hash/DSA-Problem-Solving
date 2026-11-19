@@ -23,4 +23,5 @@
 | 2026-11-17 | LeetCode | [540. Single Element in a Sorted Array](LeetCode/Medium/540-single-element-in-a-sorted-array) | Medium |
 | 2026-11-18 | Codeforces | [791A. Bear and Big Brother](Codeforces/Easy/791A-bear-and-big-brother) | Easy |
 | 2026-11-18 | LeetCode | [69. Sqrt(x)](LeetCode/Easy/69-sqrt-x) | Easy |
+| 2026-11-19 | Codeforces | [617A. Elephant](Codeforces/Easy/617A-elephant) | Easy |
 <!-- DSA-INDEX-END -->
