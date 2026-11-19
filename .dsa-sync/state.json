@@ -94,6 +94,11 @@
       "key": "codeforces:617A",
       "title": "Elephant",
       "date": "2026-11-19"
+    },
+    {
+      "key": "leetcode:367",
+      "title": "Valid Perfect Square",
+      "date": "2026-11-19"
     }
   ]
 }
