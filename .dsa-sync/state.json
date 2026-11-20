@@ -104,6 +104,11 @@
       "key": "codeforces:546A",
       "title": "Soldier and Bananas",
       "date": "2026-11-20"
+    },
+    {
+      "key": "leetcode:278",
+      "title": "First Bad Version",
+      "date": "2026-11-20"
     }
   ]
 }

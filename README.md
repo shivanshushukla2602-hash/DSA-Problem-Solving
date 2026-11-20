@@ -26,4 +26,5 @@
 | 2026-11-19 | Codeforces | [617A. Elephant](Codeforces/Easy/617A-elephant) | Easy |
 | 2026-11-19 | LeetCode | [367. Valid Perfect Square](LeetCode/Easy/367-valid-perfect-square) | Easy |
 | 2026-11-20 | Codeforces | [546A. Soldier and Bananas](Codeforces/Easy/546A-soldier-and-bananas) | Easy |
+| 2026-11-20 | LeetCode | [278. First Bad Version](LeetCode/Easy/278-first-bad-version) | Easy |
 <!-- DSA-INDEX-END -->
