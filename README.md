@@ -25,4 +25,5 @@
 | 2026-11-18 | LeetCode | [69. Sqrt(x)](LeetCode/Easy/69-sqrt-x) | Easy |
 | 2026-11-19 | Codeforces | [617A. Elephant](Codeforces/Easy/617A-elephant) | Easy |
 | 2026-11-19 | LeetCode | [367. Valid Perfect Square](LeetCode/Easy/367-valid-perfect-square) | Easy |
+| 2026-11-20 | Codeforces | [546A. Soldier and Bananas](Codeforces/Easy/546A-soldier-and-bananas) | Easy |
 <!-- DSA-INDEX-END -->
