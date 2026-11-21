@@ -114,6 +114,11 @@
       "key": "codeforces:59A",
       "title": "Word",
       "date": "2026-11-21"
+    },
+    {
+      "key": "leetcode:374",
+      "title": "Guess Number Higher or Lower",
+      "date": "2026-11-21"
     }
   ]
 }

@@ -28,4 +28,5 @@
 | 2026-11-20 | Codeforces | [546A. Soldier and Bananas](Codeforces/Easy/546A-soldier-and-bananas) | Easy |
 | 2026-11-20 | LeetCode | [278. First Bad Version](LeetCode/Easy/278-first-bad-version) | Easy |
 | 2026-11-21 | Codeforces | [59A. Word](Codeforces/Easy/59A-word) | Easy |
+| 2026-11-21 | LeetCode | [374. Guess Number Higher or Lower](LeetCode/Easy/374-guess-number-higher-or-lower) | Easy |
 <!-- DSA-INDEX-END -->
