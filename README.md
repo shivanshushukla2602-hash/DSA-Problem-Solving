@@ -30,4 +30,5 @@
 | 2026-11-21 | Codeforces | [59A. Word](Codeforces/Easy/59A-word) | Easy |
 | 2026-11-21 | LeetCode | [374. Guess Number Higher or Lower](LeetCode/Easy/374-guess-number-higher-or-lower) | Easy |
 | 2026-11-22 | Codeforces | [977A. Wrong Subtraction](Codeforces/Easy/977A-wrong-subtraction) | Easy |
+| 2026-11-22 | LeetCode | [137. Single Number II](LeetCode/Medium/137-single-number-ii) | Medium |
 <!-- DSA-INDEX-END -->
