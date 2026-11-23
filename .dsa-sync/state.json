@@ -134,6 +134,11 @@
       "key": "codeforces:110A",
       "title": "Nearly Lucky Number",
       "date": "2026-11-23"
+    },
+    {
+      "key": "leetcode:509",
+      "title": "Fibonacci Number",
+      "date": "2026-11-23"
     }
   ]
 }
