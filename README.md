@@ -34,4 +34,5 @@
 | 2026-11-23 | Codeforces | [110A. Nearly Lucky Number](Codeforces/Easy/110A-nearly-lucky-number) | Easy |
 | 2026-11-23 | LeetCode | [509. Fibonacci Number](LeetCode/Easy/509-fibonacci-number) | Easy |
 | 2026-11-24 | Codeforces | [734A. Anton and Danik](Codeforces/Easy/734A-anton-and-danik) | Easy |
+| 2026-11-24 | LeetCode | [204. Count Primes](LeetCode/Medium/204-count-primes) | Medium |
 <!-- DSA-INDEX-END -->
