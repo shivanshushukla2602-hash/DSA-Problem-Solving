@@ -154,6 +154,11 @@
       "key": "codeforces:41A",
       "title": "Translation",
       "date": "2026-11-25"
+    },
+    {
+      "key": "leetcode:217",
+      "title": "Contains Duplicate",
+      "date": "2026-11-25"
     }
   ]
 }

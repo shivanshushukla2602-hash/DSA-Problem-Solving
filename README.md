@@ -36,4 +36,5 @@
 | 2026-11-24 | Codeforces | [734A. Anton and Danik](Codeforces/Easy/734A-anton-and-danik) | Easy |
 | 2026-11-24 | LeetCode | [204. Count Primes](LeetCode/Medium/204-count-primes) | Medium |
 | 2026-11-25 | Codeforces | [41A. Translation](Codeforces/Easy/41A-translation) | Easy |
+| 2026-11-25 | LeetCode | [217. Contains Duplicate](LeetCode/Easy/217-contains-duplicate) | Easy |
 <!-- DSA-INDEX-END -->
