@@ -37,4 +37,5 @@
 | 2026-11-24 | LeetCode | [204. Count Primes](LeetCode/Medium/204-count-primes) | Medium |
 | 2026-11-25 | Codeforces | [41A. Translation](Codeforces/Easy/41A-translation) | Easy |
 | 2026-11-25 | LeetCode | [217. Contains Duplicate](LeetCode/Easy/217-contains-duplicate) | Easy |
+| 2026-11-26 | Codeforces | [677A. Vanya and Fence](Codeforces/Easy/677A-vanya-and-fence) | Easy |
 <!-- DSA-INDEX-END -->
