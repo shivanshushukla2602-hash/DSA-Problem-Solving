@@ -39,4 +39,5 @@
 | 2026-11-25 | LeetCode | [217. Contains Duplicate](LeetCode/Easy/217-contains-duplicate) | Easy |
 | 2026-11-26 | Codeforces | [677A. Vanya and Fence](Codeforces/Easy/677A-vanya-and-fence) | Easy |
 | 2026-11-26 | LeetCode | [349. Intersection of Two Arrays](LeetCode/Easy/349-intersection-of-two-arrays) | Easy |
+| 2026-11-27 | Codeforces | [1030A. In Search of an Easy Problem](Codeforces/Easy/1030A-in-search-of-an-easy-problem) | Easy |
 <!-- DSA-INDEX-END -->
