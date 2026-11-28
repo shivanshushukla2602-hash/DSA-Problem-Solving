@@ -41,4 +41,5 @@
 | 2026-11-26 | LeetCode | [349. Intersection of Two Arrays](LeetCode/Easy/349-intersection-of-two-arrays) | Easy |
 | 2026-11-27 | Codeforces | [1030A. In Search of an Easy Problem](Codeforces/Easy/1030A-in-search-of-an-easy-problem) | Easy |
 | 2026-11-27 | LeetCode | [350. Intersection of Two Arrays II](LeetCode/Easy/350-intersection-of-two-arrays-ii) | Easy |
+| 2026-11-28 | Codeforces | [467A. George and Accommodation](Codeforces/Easy/467A-george-and-accommodation) | Easy |
 <!-- DSA-INDEX-END -->
