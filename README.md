@@ -42,4 +42,5 @@
 | 2026-11-27 | Codeforces | [1030A. In Search of an Easy Problem](Codeforces/Easy/1030A-in-search-of-an-easy-problem) | Easy |
 | 2026-11-27 | LeetCode | [350. Intersection of Two Arrays II](LeetCode/Easy/350-intersection-of-two-arrays-ii) | Easy |
 | 2026-11-28 | Codeforces | [467A. George and Accommodation](Codeforces/Easy/467A-george-and-accommodation) | Easy |
+| 2026-11-28 | LeetCode | [1207. Unique Number of Occurrences](LeetCode/Easy/1207-unique-number-of-occurrences) | Easy |
 <!-- DSA-INDEX-END -->
